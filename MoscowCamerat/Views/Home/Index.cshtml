@@ -1,0 +1,114 @@
+﻿
+@section head
+{
+    <style rel="stylesheet">
+
+        html,
+        body,
+        .view {
+            height: 800px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }
+
+        .view {
+            background: url("../../img/Main.png")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulOrchestra">
+            <li>
+                <p class="textRoboto">Камерный оркестр</p>
+            </li>
+            <li>
+                <h1 class="textRoboto"><span class="navbar-brand-cocacolaMax">M</span><span class="font-italic">ОСКОВСКАЯ</span><span class="navbar-brand-cocacolaMax"> K</span><span class="font-italic">АМЕРАТА</span></h1>
+            </li>
+
+            <li>
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 350px;">
+                    <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <footer id="events" class="page-footer center-on-small-only">
+
+    <div class="container text-xs-center">
+
+        <section class="section">
+            <h1 class="section-heading title">События</h1>
+            <div class="row text-xs-center flex-center" style="color: #3f729b;">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-cascade wider">
+                        <div class="view overlay hm-white-slight">
+                            <img src="../../img/20170114m.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                        <div class="card-block text-xs-center">
+                            <h4 class="card-title"><strong>14 Января</strong></h4>
+                            <h3>ВЕЧЕР ПАМЯТИ</h3>
+                            <p class="card-text">ул. Пушечная, 4, стр. 2</p>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <hr>
+
+    <div class="social-section">
+        <ul class="ulSocial">
+            <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+        </ul>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2016 Московская камерата
+        </div>
+    </div>
+
+</footer>

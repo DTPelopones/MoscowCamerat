@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F88E760-CFA0-4D95-ACD2-3CB76C9E4AE2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoscowCamerat</RootNamespace>
+    <AssemblyName>MoscowCamerat</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Mvc1.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\BiographyController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MediyaController.cs" />
+    <Compile Include="Controllers\AfishaController.cs" />
+    <Compile Include="Controllers\OrchestraController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlHelpers\BundleExtensions.cs" />
+    <Compile Include="HtmlHelpers\BundleHelper.cs" />
+    <Compile Include="HtmlHelpers\Common.cs" />
+    <Compile Include="HtmlHelpers\ScriptHelper.cs" />
+    <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
+    <Compile Include="Models\EmailModel.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\SQL\CreateLogin.sql" />
+    <Content Include="App_Data\SQL\fn_login.sql" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\materialdesignicons.min.css" />
+    <Content Include="css\mdb.css" />
+    <Content Include="css\ms.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\materialdesignicons-webfont.svg" />
+    <Content Include="img\20170114.jpg" />
+    <Content Include="img\20170114m.jpg" />
+    <Content Include="img\AboutUs_1.jpg" />
+    <Content Include="img\AboutUS_2.jpg" />
+    <Content Include="img\Afisha\20140914.jpg" />
+    <Content Include="img\Afisha\20140914m.jpg" />
+    <Content Include="img\Afisha\20160724.jpg" />
+    <Content Include="img\Afisha\20160724m.jpg" />
+    <Content Include="img\Afisha\20161027.jpg" />
+    <Content Include="img\Afisha\20161027m.jpg" />
+    <Content Include="img\Afisha\20161116.jpg" />
+    <Content Include="img\Afisha\20161116m.jpg" />
+    <Content Include="img\Afisha\20161126.jpg" />
+    <Content Include="img\Afisha\20161126m.jpg" />
+    <Content Include="img\Afisha\20161224.jpg" />
+    <Content Include="img\Afisha\20161224m.jpg" />
+    <Content Include="img\Afisha\20170114.jpg" />
+    <Content Include="img\Afisha\20170114m.jpg" />
+    <Content Include="img\MoscowCameratLogo.jpg" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\arrow.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\cart.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\first.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\last.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\list.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\list2.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\loop.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\music.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\pause.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\play.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\shuffle.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\spinner.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\PNG\volume.png" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\arrow.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\cart.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\first.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\last.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\list.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\list2.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\loop.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\music.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\pause.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\play.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\shuffle.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\spinner.svg" />
+    <Content Include="img\audio\entypo-25px-ffffff\SVG\volume.svg" />
+    <Content Include="img\brand.svg" />
+    <Content Include="img\Orchestra\1-e\EvelinaSorokina.jpg" />
+    <Content Include="img\Orchestra\1-e\EvelinaSorokina_m.jpg" />
+    <Content Include="img\Orchestra\1-e\FedotovaAvatar.jpg" />
+    <Content Include="img\Orchestra\1-e\FedotovaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\1-e\GoryachevaAvatar.jpg" />
+    <Content Include="img\Orchestra\1-e\GoryachevaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\1-e\GrigoryanAvatar.jpg" />
+    <Content Include="img\Orchestra\1-e\GrigoryanAvatar_m.jpg" />
+    <Content Include="img\Orchestra\1-e\SabanovaAvatar.jpg" />
+    <Content Include="img\Orchestra\1-e\SabanovaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\1-e\VladimirBugrovAvatar.jpg" />
+    <Content Include="img\Orchestra\1-e\VladimirBugrovAvatar_m.jpg" />
+    <Content Include="img\Orchestra\2-e\MinaevaAvatar.jpg" />
+    <Content Include="img\Orchestra\2-e\MinaevaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\2-e\NasedkinaAvatar.jpg" />
+    <Content Include="img\Orchestra\2-e\NasedkinaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\2-e\NeberikutinAvatar.jpg" />
+    <Content Include="img\Orchestra\2-e\NeberikutinAvatar_m.jpg" />
+    <Content Include="img\Orchestra\2-e\PanjkoAvatar.jpg" />
+    <Content Include="img\Orchestra\2-e\PanjkoAvatar_m.jpg" />
+    <Content Include="img\Orchestra\2-e\ShpaginaAvatar.jpg" />
+    <Content Include="img\Orchestra\2-e\ShpaginaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Alty\NevslayaAvatar.jpg" />
+    <Content Include="img\Orchestra\Alty\NevslayaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Alty\PoluninAvatar.jpg" />
+    <Content Include="img\Orchestra\Alty\PoluninAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Alty\ShelehovskajaAvatar.jpg" />
+    <Content Include="img\Orchestra\Alty\ShelehovskajaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Alty\Yankovskiy.jpg" />
+    <Content Include="img\Orchestra\Alty\Yankovskiy_m.jpg" />
+    <Content Include="img\Orchestra\ArtDirector\Kogan.jpg" />
+    <Content Include="img\Orchestra\ArtDirector\Kogan_m.jpg" />
+    <Content Include="img\Orchestra\Basso\RumyancevAvatar.jpg" />
+    <Content Include="img\Orchestra\Basso\RumyancevAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Cello\MorchenkoAvatar.jpg" />
+    <Content Include="img\Orchestra\Cello\MorchenkoAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Cello\VolkovaAvatar.jpg" />
+    <Content Include="img\Orchestra\Cello\VolkovaAvatar_m.jpg" />
+    <Content Include="img\Orchestra\Kapellmeister\NikolayPetrovich.jpg" />
+    <Content Include="img\Orchestra\Kapellmeister\NikolayPetrovich_m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_19.jpg" />
+    <Content Include="img\Orchestra\Orchestra_19m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_20.jpg" />
+    <Content Include="img\Orchestra\Orchestra_20m.jpg" />
+    <Content Include="js\bar-ui.js" />
+    <Content Include="js\jquery-3.1.1.min.js" />
+    <Content Include="js\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="js\jquery.validate.min.js" />
+    <Content Include="js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="js\jquery.validate.unobtrusive.min_old.js" />
+    <Content Include="js\mdb.min.js" />
+    <Content Include="js\soundmanager2-nodebug-jsmin.js" />
+    <Content Include="js\tether.min.js" />
+    <Content Include="css\bar-ui.css" />
+    <Content Include="css\bootstrap-social.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\jquery.powertip-dark.css" />
+    <Content Include="css\material-icons-debug.css" />
+    <Content Include="css\modern-business.css" />
+    <Content Include="css\perfect-scrollbar.css" />
+    <Content Include="css\violin.css" />
+    <Content Include="css\youtube-video-player.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\AjaxLoader.gif" />
+    <Content Include="img\facebook-icon.svg" />
+    <Content Include="img\instagram-icon.svg" />
+    <Content Include="img\Orchestra\OrchestraMain.jpg" />
+    <Content Include="img\Orchestra\Orchestra_0.jpg" />
+    <Content Include="img\Orchestra\Orchestra_0m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_1.jpg" />
+    <Content Include="img\Orchestra\Orchestra_10.jpg" />
+    <Content Include="img\Orchestra\Orchestra_10m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_11.jpg" />
+    <Content Include="img\Orchestra\Orchestra_11m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_12.jpg" />
+    <Content Include="img\Orchestra\Orchestra_12m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_14.jpg" />
+    <Content Include="img\Orchestra\Orchestra_14m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_15.jpg" />
+    <Content Include="img\Orchestra\Orchestra_15m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_17.jpg" />
+    <Content Include="img\Orchestra\Orchestra_17m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_18.jpg" />
+    <Content Include="img\Orchestra\Orchestra_18m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_1m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_3.jpg" />
+    <Content Include="img\Orchestra\Orchestra_3m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_4.jpg" />
+    <Content Include="img\Orchestra\Orchestra_4m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_5.jpg" />
+    <Content Include="img\Orchestra\Orchestra_5m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_6.jpg" />
+    <Content Include="img\Orchestra\Orchestra_6m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_7.jpg" />
+    <Content Include="img\Orchestra\Orchestra_7m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_8.jpg" />
+    <Content Include="img\Orchestra\Orchestra_8m.jpg" />
+    <Content Include="img\Orchestra\Orchestra_9.jpg" />
+    <Content Include="img\Orchestra\Orchestra_9m.jpg" />
+    <Content Include="img\youtube-sprite%402x.png" />
+    <Content Include="img\youtube-sprite.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.mousewheel.js" />
+    <Content Include="js\jquery.powertip.js" />
+    <Content Include="js\medi.js" />
+    <Content Include="js\perfect-scrollbar.js" />
+    <Content Include="js\photoswipe.js" />
+    <Content Include="js\violin.js" />
+    <Content Include="js\youtube-video-player.jquery.js" />
+    <Content Include="PhotoSwipe\default-skin\default-skin.css" />
+    <Content Include="PhotoSwipe\default-skin\default-skin.png" />
+    <Content Include="PhotoSwipe\default-skin\default-skin.svg" />
+    <Content Include="PhotoSwipe\photoswipe-ui-default.min.js" />
+    <Content Include="PhotoSwipe\photoswipe.css" />
+    <Content Include="PhotoSwipe\photoswipe.min.js" />
+    <Content Include="PhotoSwipe\default-skin\preloader.gif" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Orchestra\Index.cshtml" />
+    <Content Include="Views\Mediya\PhotoPart.cshtml" />
+    <Content Include="Views\Orchestra\OrchestraPart.cshtml" />
+    <Content Include="Views\Error\NotFound.cshtml" />
+    <Content Include="Views\Error\Forbidden.cshtml" />
+    <Content Include="Views\PhotoSwipe\PhotoSwipePart.cshtml" />
+    <Content Include="Views\Afisha\AfishaPart.cshtml" />
+    <Content Include="Views\Contact\Feedback.cshtml" />
+    <Content Include="Views\Contact\ErrorPartEmail.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
+    <Content Include="Views\Video\Video.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Backups\" />
+    <Folder Include="Context\" />
+    <Folder Include="img\Concert\" />
+    <Folder Include="img\Lesson\" />
+    <Folder Include="img\Studio\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Tracks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Biography\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Afisha\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Contact\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mediya\Photo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Mediya\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\Arciform.otf" />
+    <Content Include="fonts\Coca-cola.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoscowCamerat.Domain\MoscowCamerat.Domain.csproj">
+      <Project>{dc3c3a5e-07de-43d1-a86d-98b6b9bff9c2}</Project>
+      <Name>MoscowCamerat.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\roboto\Roboto-Bold.eot" />
+    <Content Include="fonts\roboto\Roboto-Bold.ttf" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff" />
+    <Content Include="fonts\roboto\Roboto-Bold.woff2" />
+    <Content Include="fonts\roboto\Roboto-Light.eot" />
+    <Content Include="fonts\roboto\Roboto-Light.ttf" />
+    <Content Include="fonts\roboto\Roboto-Light.woff" />
+    <Content Include="fonts\roboto\Roboto-Light.woff2" />
+    <Content Include="fonts\roboto\Roboto-Medium.eot" />
+    <Content Include="fonts\roboto\Roboto-Medium.ttf" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff" />
+    <Content Include="fonts\roboto\Roboto-Medium.woff2" />
+    <Content Include="fonts\roboto\Roboto-Regular.eot" />
+    <Content Include="fonts\roboto\Roboto-Regular.ttf" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff" />
+    <Content Include="fonts\roboto\Roboto-Regular.woff2" />
+    <Content Include="fonts\roboto\Roboto-Thin.eot" />
+    <Content Include="fonts\roboto\Roboto-Thin.ttf" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff" />
+    <Content Include="fonts\roboto\Roboto-Thin.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\CocaColaRus.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\materialdesignicons-webfont.eot" />
+    <Content Include="fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="fonts\materialdesignicons-webfont.woff" />
+    <Content Include="fonts\materialdesignicons-webfont.woff2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48305/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

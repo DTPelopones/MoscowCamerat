@@ -1,0 +1,92 @@
+﻿@model MoscowCamerat.Models.EmailModel
+
+<div id="emailSend" class="card-block card-block-contacts-MK">
+@using (Ajax.BeginForm(
+                       "Feedback",
+                       "Contact",
+                       new AjaxOptions
+                       {
+                           HttpMethod = "post",
+                           LoadingElementId = "sendingProgress",
+                           UpdateTargetId = "emailMessage",
+                           InsertionMode = InsertionMode.Replace,
+                           OnSuccess = "MailSended",
+                           OnComplete = "MailCompleted",
+                           OnFailure = "MailError"
+                       })
+        )
+{
+    <div class="text-xs-center">
+        <h3 class="fontContact"><i class="fa fa-envelope"></i> Напишите нам:</h3>
+        <hr>
+    </div>
+    <div class="md-form">
+        <i class="fa fa-user prefix" style="left: 0px;"></i>
+        @Html.TextBoxFor(model => model.FromName, new { @id = "FromName", @type = "text", @class = "form-control", @onkeyup = "checkFormsInput()" })
+        @Html.LabelFor(model => model.FromName, new { @for = "FromName" })
+    </div>
+    <div class="md-form">
+        <i class="fa fa-envelope prefix" style="left: 0px;"></i>
+        @Html.TextBoxFor(model => model.FromEmail, new { @id = "FromEmail", @type = "text", @class = "form-control", @onchange = "checkFormsInput()", @onkeydown = "checkFormsInput()", @onblur = "checkFormsInput()", @onload = "checkFormsInput()" })
+        @Html.LabelFor(model => model.FromEmail, new { @for = "FromEmail" })
+        @Html.ValidationMessageFor(model => model.FromEmail, "", new { @class = "text-danger", @id = "FromEmailDanger" })
+    </div>
+    <div class="md-form">
+        <i class="fa fa-pencil prefix" style="left: 0px;"></i>
+        @Html.TextAreaFor(model => model.Body, new { @id = "Body", @type = "text", @class = "md-textarea", @onkeyup = "checkFormsInput()" })
+        @Html.LabelFor(model => model.Body, new { @for = "Body" })
+    </div>
+    <div class="text-xs-center">
+        <button id="submit" type="submit" class="btn btn-default">Отправить</button>
+        <span id="sendingProgress" style="display: none;">
+            отправка сообщения...
+            <img src="@Href("~/img/AjaxLoader.gif")" alt="Ожидание" />
+        </span>
+        <span id="emailMessage" style="display: none;" ></span>
+
+        <div class="call">
+            <br>
+            <span><i class="fa fa-phone"> </i></span> + 7 495 34 565 280
+        </div>
+    </div>
+}
+</div>      
+
+<script>
+    function checkFormsInput() {
+        var name = $('#FromName').val();
+        var email = $('#FromEmail').val();
+        var body = $('#Body').val();
+        var isEmailError = $('#FromEmailDanger').hasClass('field-validation-error'); 
+
+        if (name.length != 0 && email.length != 0 && body.length != 0 && !isEmailError) {
+            $('#submit').removeAttr('disabled');
+
+        } else {
+            $('#submit').attr('disabled', 'disabled');
+
+        }
+    }
+    function clearMailForm() {
+        $('#FromName').val('');
+        $('#FromEmail').val('');
+        $('#Body').val('');
+    }
+    function MailSended() {
+        clearMailForm();
+        sendMessage();
+    }
+    function MailCompleted() {
+        checkFormsInput();
+    }
+    function MailError() {
+        sendMessage();
+    }
+    function sendMessage(){
+        setTimeout(function () { $('#emailMessage').css('display', 'block'); }, 100); 
+        setTimeout(function () { $('#emailMessage').css('display', 'none'); }, 5000); 
+    }
+    window.onload = function () {
+        checkFormsInput();
+    }
+</script>

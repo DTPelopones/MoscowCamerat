@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Lesson">
+  <DataContextMoniker Name="/LessonDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1356bcaa-f5a0-48b5-a5b3-06b41a75f23c" absoluteBounds="6.25, 3.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LessonDataContext/Lesson" />
+      <nestedChildShapes>
+        <elementListCompartment Id="429a4c80-bd47-462c-a9af-aafa4687fde2" absoluteBounds="6.2650000000000006, 3.9600000000000009, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5937a72-09bb-4f29-916b-85eae93d2c6e" absoluteBounds="0.625, 3.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LessonDataContext/Material" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6cb79771-9d2a-4c9d-914d-bc53013f257f" absoluteBounds="0.64, 3.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0377ef66-ee38-4333-8782-5c93d026b2fa" absoluteBounds="0.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LessonDataContext/Method" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c4a325c8-3c66-4ea7-9aac-8a551acb855e" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5d6c1b6-6336-43d8-90cd-2765f5903041" absoluteBounds="6.75, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/LessonDataContext/Plan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f5e2f672-7a64-44c1-b60a-b3b03a96023a" absoluteBounds="6.7650000000000006, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87f0d336-0ad1-40a0-bd08-21ce4e2045bf" absoluteBounds="0.625, 5.25, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/LessonDataContext/Video" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be177165-5206-4d75-a8a8-81ba0fcb3d90" absoluteBounds="0.64000000000000012, 5.7100000000000009, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.25 : 4.6723046875); (2.625 : 4.6723046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LessonDataContext/Lesson/Lesson_Material" />
+      <nodes>
+        <classShapeMoniker Id="1356bcaa-f5a0-48b5-a5b3-06b41a75f23c" />
+        <classShapeMoniker Id="d5937a72-09bb-4f29-916b-85eae93d2c6e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(0.75 : 1.62798725335537); (0.5 : 1.62798725335537); (0.5 : 2.1551696113782); (0.75 : 2.1551696113782)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LessonDataContext/Method/Method_Method" />
+      <nodes>
+        <classShapeMoniker Id="0377ef66-ee38-4333-8782-5c93d026b2fa" />
+        <classShapeMoniker Id="0377ef66-ee38-4333-8782-5c93d026b2fa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 3.28125); (7.40625 : 3.28125); (7.40625 : 2.7131982421875)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LessonDataContext/Material/Material_Plan" />
+      <nodes>
+        <classShapeMoniker Id="d5937a72-09bb-4f29-916b-85eae93d2c6e" />
+        <classShapeMoniker Id="b5d6c1b6-6336-43d8-90cd-2765f5903041" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.0625 : 1.88544840494792); (3.0625 : 0.4375); (7.75 : 0.4375); (7.75 : 0.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LessonDataContext/Method/Method_Plan" />
+      <nodes>
+        <classShapeMoniker Id="0377ef66-ee38-4333-8782-5c93d026b2fa" />
+        <classShapeMoniker Id="b5d6c1b6-6336-43d8-90cd-2765f5903041" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.625 : 5.25); (1.625 : 4.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LessonDataContext/Video/Video_Material" />
+      <nodes>
+        <classShapeMoniker Id="87f0d336-0ad1-40a0-bd08-21ce4e2045bf" />
+        <classShapeMoniker Id="d5937a72-09bb-4f29-916b-85eae93d2c6e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="14b901db-eada-4a76-89a2-f5daa65788af" absoluteBounds="3.125, 4.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/LessonDataContext/Account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="858c919e-6eab-4c50-a553-7149db14de97" absoluteBounds="3.1399999999999997, 5.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8f35773-4549-4b3e-b848-c2f391c80374" absoluteBounds="3.125, 0.5, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/LessonDataContext/Photo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52343e85-86ae-4a2a-b3d0-23dd0351b307" absoluteBounds="3.1399999999999997, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

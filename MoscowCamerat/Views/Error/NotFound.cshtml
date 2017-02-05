@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Не найдена страница - Александра Федотова";
+}
+
+@section metatags
+{
+    <meta name="robots" content="noindex, nofollow, noarchive">
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                404
+                <small>страница не найдена</small>
+            </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p class="error-404">404</p>
+            <p class="lead">Страница, которую вы ищете не найдена.</p>
+            <p>Вот некоторые полезные ссылки, которые помогут вам найти то, что вы ищете:</p>
+            <ul>
+                <li>
+                    @Html.ActionLink("ОБО МНЕ", "Index", "Biography")
+                </li>
+                <li>
+                    @Html.ActionLink("АФИША", "Index", "Afisha")
+                </li>
+                <li>
+                    @Html.ActionLink("ОРКЕСТР", "Index", "Orchestra")
+                </li>
+                <li>
+                    @Html.ActionLink("ФОТО", "Index", "Mediya")
+                </li>
+                <li>
+                    @Html.ActionLink("ВИДЕО", "Index", "Video")
+                </li>
+                <li>
+                    @Html.ActionLink("АУДИО", "Index", "Audio")
+                </li>
+                <li>
+                    @Html.ActionLink("НОВОСТИ", "Index", "News")
+                </li>
+                <li>
+                    @Html.ActionLink("УРОКИ", "Index", "Lessons")
+                </li>
+                <li>
+                    @Html.ActionLink("КОНТАКТЫ", "Index", "Contact")
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

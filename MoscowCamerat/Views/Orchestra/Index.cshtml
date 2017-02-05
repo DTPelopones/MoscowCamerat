@@ -1,0 +1,395 @@
+﻿@model IEnumerable<MoscowCamerat.Domain.Photo>
+
+@{
+    ViewBag.Title = "Оркестр \"Московская Камерата\"";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="Состав Московская камерата, оркестр, камерный оркестр, музыка, концертмейстер Александра Федотова, Дмитрий Коган, художественный руководитель Дмитрий Коган, Николай Соколов, Николай Соколов дирижер" />
+    <meta name="description" content="Состав камерного оркестра "Московская камерата"" />
+    @Styles.Render("~/bundles/photoswipecss")
+    @Styles.Render("~/bundles/violincss")
+}
+
+@section head
+{
+<style rel="stylesheet">
+
+    html,
+    body,
+    .view {
+        height: 750px;
+        background-color: rgb(76, 76, 170);
+    }
+
+    viewImage {
+        height: 406px;
+    }
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    .scrolling-navbar {
+        -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+        transition: background .5s ease-in-out, padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        background-color: #1C2331;
+    }
+
+    footer.page-footer {
+        background-color: #1C2331;
+        margin-top: -1px;
+    }
+
+    .flex-center {
+        color: #fff;
+    }
+
+    .view {
+        background: url("../../img/MoscowCameratLogo.jpg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+</style>
+    @Scripts.Render("~/bundles/photoswipejs")
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulOrchestra">
+            <li>
+                <p class="textRoboto">Камерный оркестр</p>
+            </li>
+            <li>
+                <h1 class="textRoboto"><span class="navbar-brand-cocacolaMax">M</span><span class="font-italic">ОСКОВСКАЯ</span><span class="navbar-brand-cocacolaMax"> K</span><span class="font-italic">АМЕРАТА</span></h1>
+            </li>
+            <li>
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 350px;">
+                    <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<footer id="events" class="page-footer center-on-small-only">
+    <div class="container text-xs-center ">
+        <div class="row text-xs-center flex-center">
+            <div id="demo-test-gallery" class="demo-gallery container-flex" data-pswp-uid="1">
+                <div class="mainLine">
+                    <div class="card collection-card z-depth-1-half">
+                        <div class="viewImage hm-zoom">
+                            <a href="/img/Orchestra/ArtDirector/Kogan.jpg" data-size="800x1200" data-med="/img/Orchestra/ArtDirector/Kogan.jpg" data-med-size="800x1200">
+                                <img src="/img/Orchestra/ArtDirector/Kogan_m.jpg" class="img-fluid cropMK" alt="Фото - Художественный руководитель Дмитрий Коган">
+                            </a>
+                            <div class="stripe light">
+                                <p>Художественный<br />руководитель</p>
+                                <p>ДМИТРИЙ КОГАН</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mainLine">
+                    <div class="card collection-card z-depth-1-half">
+                        <div class="viewImage hm-zoom">
+                            <a href="/img/Orchestra/Kapellmeister/NikolayPetrovich.jpg" data-size="2520x3780" data-med="/img/Orchestra/Kapellmeister/NikolayPetrovich.jpg" data-med-size="2520x3780">
+                                <img src="/img/Orchestra/Kapellmeister/NikolayPetrovich_m.jpg" class="img-fluid cropMK" alt="Фото - Главный дирижер Николай Соколов">
+                            </a>
+                            <div class="stripe light">
+                                <p>Главный<br />дирижер</p>
+                                <p>НИКОЛАЙ СОКОЛОВ</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/> 
+    <div class="container text-xs-center ">
+        <section class="section team-section title">
+            <h1 class="h5-responsive">Первые скрипки</h1><br />
+            <div class="row text-xs-center flex-center">
+                <div id="demo-test-gallery_1" class="demo-gallery container-flex" data-pswp-uid="1">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/1-e/FedotovaAvatar.jpg" data-size="732x900" data-med="/img/Orchestra/1-e/FedotovaAvatar.jpg" data-med-size="732x900">
+                                    <img src="/img/Orchestra/1-e/FedotovaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - Концертмейсер и первая скрипка Федотова Александра">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>АЛЕКСАНДРА ФЕДОТОВА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/1-e/EvelinaSorokina.jpg" data-size="2592x3186" data-med="/img/Orchestra/1-e/EvelinaSorokina.jpg" data-med-size="2592x3186">
+                                    <img src="/img/Orchestra/1-e/EvelinaSorokina_m.jpg" class="img-fluid cropMK" alt="Фото - Первая скрипка Сорокина Эвелина">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЭВЕЛИНА СОРОКИНА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/1-e/GrigoryanAvatar.jpg" data-size="1679x2062" data-med="/img/Orchestra/1-e/GrigoryanAvatar.jpg" data-med-size="1679x2062">
+                                    <img src="/img/Orchestra/1-e/GrigoryanAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЖАННА ГРИГОРЯН">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЖАННА ГРИГОРЯН</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/1-e/VladimirBugrovAvatar.jpg" data-size="391x480" data-med="/img/Orchestra/1-e/VladimirBugrovAvatar.jpg" data-med-size="391x480">
+                                    <img src="/img/Orchestra/1-e/VladimirBugrovAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ВЛАДИМИР БУГРОВ">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ВЛАДИМИР БУГРОВ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/1-e/SabanovaAvatar.jpg" data-size="3559x4372" data-med="/img/Orchestra/1-e/SabanovaAvatar.jpg" data-med-size="3559x4372">
+                                    <img src="/img/Orchestra/1-e/SabanovaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЭЛЬВИРА САБАНОВА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЭЛЬВИРА САБАНОВА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/1-e/GoryachevaAvatar.jpg" data-size="2867x3522" data-med="/img/Orchestra/1-e/GoryachevaAvatar.jpg" data-med-size="2867x3522">
+                                    <img src="/img/Orchestra/1-e/GoryachevaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЕЛЕНА ГОРЯЧЕВА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЕЛЕНА ГОРЯЧЕВА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <hr>
+    <div class="container text-xs-center">
+        <section class="section team-section title">
+            <h1 class="h5-responsive">Вторые скрипки</h1><br />
+            <div class="row text-xs-center flex-center">
+                <div id="demo-test-gallery_2" class="demo-gallery container-flex" data-pswp-uid="1">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/2-e/PanjkoAvatar.jpg" data-size="3174x3901" data-med="/img/Orchestra/2-e/PanjkoAvatar.jpg" data-med-size="3174x3901">
+                                    <img src="/img/Orchestra/2-e/PanjkoAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЕЛЕНА ПАНЬКО">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЕЛЕНА ПАНЬКО</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/2-e/MinaevaAvatar.jpg" data-size="4016x4937" data-med="/img/Orchestra/2-e/MinaevaAvatar.jpg" data-med-size="4016x4937">
+                                    <img src="/img/Orchestra/2-e/MinaevaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ВАЛЕНТИНА МИНАЕВА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ВАЛЕНТИНА МИНАЕВА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/2-e/NasedkinaAvatar.jpg" data-size="4016x4933" data-med="/img/Orchestra/2-e/NasedkinaAvatar.jpg" data-med-size="4016x4933">
+                                    <img src="/img/Orchestra/2-e/NasedkinaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ОЛЬГА НАСЕДКИНА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ОЛЬГА НАСЕДКИНА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/2-e/NeberikutinAvatar.jpg" data-size="2873x3529" data-med="/img/Orchestra/2-e/NeberikutinAvatar.jpg" data-med-size="2873x3529">
+                                    <img src="/img/Orchestra/2-e/NeberikutinAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - АЛЕКСЕЙ НЕБЕРИКУТИН">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>АЛЕКСЕЙ НЕБЕРИКУТИН</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/2-e/ShpaginaAvatar.jpg" data-size="1297x1593" data-med="/img/Orchestra/2-e/ShpaginaAvatar.jpg" data-med-size="1297x1593">
+                                    <img src="/img/Orchestra/2-e/ShpaginaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЕЛЕНА ШПАГИНА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЕЛЕНА ШПАГИНА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <hr>
+    <div class="container text-xs-center">
+        <section class="section team-section title">
+            <h1 class="h5-responsive">Альты</h1><br />
+            <div class="row text-xs-center flex-center">
+                <div id="demo-test-gallery_3" class="demo-gallery container-flex" data-pswp-uid="1">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/Alty/ShelehovskajaAvatar.jpg" data-size="3207x3944" data-med="/img/Orchestra/Alty/ShelehovskajaAvatar.jpg" data-med-size="3207x3944">
+                                    <img src="/img/Orchestra/Alty/ShelehovskajaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЕЛЕНА ШЕЛЕХОВСКАЯ">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЕЛЕНА ШЕЛЕХОВСКАЯ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/Alty/PoluninAvatar.jpg" data-size="3052x3753" data-med="/img/Orchestra/Alty/PoluninAvatar.jpg" data-med-size="3052x3753">
+                                    <img src="/img/Orchestra/Alty/PoluninAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ОЛЬГА НАСЕДКИНА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ОЛЬГА НАСЕДКИНА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/Alty/NevslayaAvatar.jpg" data-size="1044x1284" data-med="/img/Orchestra/Alty/NevslayaAvatar.jpg" data-med-size="1044x1284">
+                                    <img src="/img/Orchestra/Alty/NevslayaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ОЛЬГА НЕВСКАЯ">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ОЛЬГА НЕВСКАЯ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/Alty/Yankovskiy.jpg" data-size="1477x1815" data-med="/img/Orchestra/Alty/ShelehovskajaAvatar.jpg" data-med-size="1477x1815">
+                                    <img src="/img/Orchestra/Alty/Yankovskiy_m.jpg" class="img-fluid cropMK" alt="Фото - ГЕОРГИЙ ЯНКОВСКИЙ">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ГЕОРГИЙ ЯНКОВСКИЙ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <hr>
+    <div class="container text-xs-center">
+        <section class="section team-section title">
+            <h1 class="h5-responsive">ВИОЛОНЧЕЛИ</h1><br />
+            <div class="row text-xs-center flex-center">
+                <div id="demo-test-gallery_3" class="demo-gallery container-flex" data-pswp-uid="1">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-5 col-xl-5 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/Cello/VolkovaAvatar.jpg" data-size="3135x3855" data-med="/img/Orchestra/Cello/VolkovaAvatar.jpg" data-med-size="3135x3855">
+                                    <img src="/img/Orchestra/Cello/VolkovaAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - НИНА ВОЛКОВА">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>НИНА ВОЛКОВА</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-5 col-xl-5 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage  hm-zoom">
+                                <a href="/img/Orchestra/Cello/MorchenkoAvatar.jpg" data-size="3681x3296" data-med="/img/Orchestra/Cello/MorchenkoAvatar.jpg" data-med-size="3681x3296">
+                                    <img src="/img/Orchestra/Cello/MorchenkoAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЛЮДМИЛА МОРЧЕНКО">
+                                </a>
+                                <div class="stripeFirstLine light">
+                                    <p>ЛЮДМИЛА МОРЧЕНКО</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <hr>
+    <div class="container text-xs-center">
+        <section class="section team-section title">
+            <h1 class="h5-responsive">КОНТРОБАС</h1><br />
+            <div class="row text-xs-center flex-center">
+                <div id="demo-test-gallery_3" class="demo-gallery container-flex" data-pswp-uid="1">
+                    <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 col-xl-10 mb-r">
+                        <div class="card collection-card z-depth-1-half">
+                            <div class="viewImage hm-zoom">
+                                <a href="/img/Orchestra/Basso/RumyancevAvatar.jpg" data-size="3135x3855" data-med="/img/Orchestra/Cello/RumyancevAvatar.jpg" data-med-size="3135x3855">
+                                    <img src="/img/Orchestra/Basso/RumyancevAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - СЕРГЕЙ РУМЯНЦЕВ">
+                                </a> 
+                                <div class="stripeFirstLine light"> 
+                                    <p>СЕРГЕЙ РУМЯНЦЕВ</p> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    @Html.Partial("~/Views/PhotoSwipe/PhotoSwipePart.cshtml")
+    <hr>
+    <div class="social-section">
+        <ul class="ulSocial">
+            <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+        </ul>
+    </div>
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2016 Московская камерата
+        </div>
+    </div>
+</footer>
+
+@Scripts.Render("~/bundles/photoswipemanjs")

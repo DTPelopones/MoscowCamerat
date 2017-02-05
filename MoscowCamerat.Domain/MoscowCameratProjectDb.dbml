@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MoscowCamerat" Class="LessonDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=SKYLAKE\SQLEXPRESS2012;Initial Catalog=MoscowCamerat;Integrated Security=True" SettingsObjectName="MoscowCamerat.Domain.Properties.Settings" SettingsPropertyName="MoscowCameratConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Lesson" Member="Lesson">
+    <Type Name="Lesson">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="sort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Lesson_Material" Member="Material" ThisKey="ID" OtherKey="LessonID" Type="Material" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Material" Member="Material">
+    <Type Name="Material">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LessonID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VideoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Material_Plan" Member="Plan" ThisKey="ID" OtherKey="MaterialID" Type="Plan" />
+      <Association Name="Lesson_Material" Member="Lesson" ThisKey="LessonID" OtherKey="ID" Type="Lesson" IsForeignKey="true" />
+      <Association Name="Video_Material" Member="Video" ThisKey="VideoID" OtherKey="ID" Type="Video" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Method" Member="Method">
+    <Type Name="Method">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="sort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Method_Method" Member="Method2" ThisKey="ID" OtherKey="ParentID" Type="Method" />
+      <Association Name="Method_Plan" Member="Plan" ThisKey="ID" OtherKey="MethodID" Type="Plan" />
+      <Association Name="Method_Method" Member="Method1" ThisKey="ParentID" OtherKey="ID" Type="Method" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Plan]" Member="Plan">
+    <Type Name="Plan">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="MaterialID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MethodID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sort" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Material_Plan" Member="Material" ThisKey="MaterialID" OtherKey="ID" Type="Material" IsForeignKey="true" />
+      <Association Name="Method_Plan" Member="Method" ThisKey="MethodID" OtherKey="ID" Type="Method" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Video" Member="Video">
+    <Type Name="Video">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="movieTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Video_Material" Member="Material" ThisKey="ID" OtherKey="VideoID" Type="Material" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Account" Member="Account">
+    <Type Name="Account">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="password_hash" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="salt" Type="System.String" DbType="NVarChar(36) NOT NULL" CanBeNull="false" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Photo" Member="Photo">
+    <Type Name="Photo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="movieTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="album" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="pathm" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="sizem" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="size" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="sort" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="alt" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="eventDay" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="eventMonthYear" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="eventDesc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="eventTime" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

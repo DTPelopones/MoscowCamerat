@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Контакты - \"Московская Камерата\"";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="Московская камерата, оркестр, камерный оркестр, контакты оркестра Московская камерата " />
+    <meta name="description" content="Камерный оркестр "Московская камерата" - контакты" />
+    @Styles.Render("~/bundles/violincss")
+}
+
+@section head
+{
+
+
+    <style rel="stylesheet">
+
+        html,
+        body,
+        .view {
+            height: 700px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        viewImage {
+            height: 406px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }
+
+        .view {
+            background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/jqueryunobtrusiveajaxjs")
+    @Scripts.Render("~/bundles/jqueryvalidatejs")
+    @Scripts.Render("~/bundles/jqueryvalidateunobtrusivejs")
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulOrchestra">
+            <li>
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 0px;">
+                    <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin contactsMK" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                </div>
+            <li>
+                @Html.Partial("Feedback", new MoscowCamerat.Models.EmailModel())
+            </li>
+        </ul>
+    </div>
+</div>
+
+<footer id="events" class="page-footer center-on-small-only">
+
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left">
+
+                <h4 class="section-heading textRoboto"><span class="navbar-brand-cocacolaMax">K</span><span class="font-italic">ОНТАКТЫ</span></h4>
+
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                    <div class="col-lg-4 fontContactPart1">
+                        <h4 class="fontContactPart">Россия, Москва</h4>
+                        <i class="fa fa-envelope-o"></i><abbr class="fontContactPart1" title="Email"> Email</abbr>: <a href="mailto:moscow.camerata@gmail.com">moscow.camerata@gmail.com</a>
+                    </div>
+                    <div class="col-lg-4 fontContactPart1">
+                        <h4>Социальные сети</h4>
+                        <div class="social-section">
+                            <ul class="ulSocial">
+                                <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 fontContactPart1">
+                        <h4 class="fontContactPart"><i class="fa"></i>Веб сайты</h4>
+                        <a title="Mosconcert" data-placement="bottom" data-toggle="tooltip" href="http://www.mosconcert.com/"><i class="fa fontContactPart1">mosconcert.com</i></a>
+                        <br />
+                        <a title="dmitrikogan" data-placement="bottom" data-toggle="tooltip" href="http://dmitrikogan.ru/"><i class="fa fontContactPart1">dmitrikogan.ru</i></a>
+                        <br />
+                        <a title="aleksandrafedotova" data-placement="bottom" data-toggle="tooltip" href="http://aleksandrafedotova.ru" ><i class="fa fontContactPart1">aleksandrafedotova.ru</i></a>
+                    </div>
+                </div>
+
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+
+                    <div class="col-lg-12">
+                        <hr />
+                        <iframe width="100%" scrolling="no" height="400px" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2243.508425734103!2d37.568585!3d55.784409!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5498b4a1d0101%3A0xcdb48e4d1c5c28f2!2z0JzQvtGB0LrQvtC90YbQtdGA0YI!5e0!3m2!1sen!2sru!4v1476545619031" marginwidth="0" marginheight="0"></iframe>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <hr />
+<div class="footer-copyright">
+    <div class="container-fluid">
+        © 2016 Московская камерата
+    </div>
+</div>
+
+</footer>

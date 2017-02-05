@@ -1,0 +1,210 @@
+﻿
+@{
+    ViewBag.Title = "Оркестр \"Московская Камерата\" - Александра Федотова";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="Московская камерата, оркестр, камерный оркестр, основатель Игорь Фролов, музыка, концертмейстер Александра Федотова, Дмитрий Коган, художественный руководитель Дмитрий Коган, Николай Соколов, Николай Соколов дирижер, Александра Федотова" />
+    <meta name="description" content="«Московская Камерата», являющийся одним из ведущих музыкальных коллективов России, был создан в 1994 году. С момента основания оркестр возглавил выдающийся скрипач, композитор, профессор Московской консерватории, Народный артист России Игорь Фролов." />
+    @Styles.Render("~/bundles/violincss")
+}
+
+@section head
+{
+    <style rel="stylesheet">
+
+        html,
+        body,
+        .view {
+            height: 750px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        viewImage {
+            height: 406px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }
+
+        .view {
+            background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulOrchestra">
+            <li>
+                <p class="textRoboto">Камерный оркестр</p>
+            </li>
+            <li>
+                <h1 class="textRoboto"><span class="navbar-brand-cocacolaMax">M</span><span class="font-italic">ОСКОВСКАЯ</span><span class="navbar-brand-cocacolaMax"> K</span><span class="font-italic">АМЕРАТА</span></h1>
+            </li>
+
+            <li>
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 250px;">
+                    <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+
+<footer id="events" class="page-footer center-on-small-only">
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left">
+
+                <h4 class="section-heading textRoboto"><span class="navbar-brand-cocacolaMax">M</span><span class="font-italic">ОСКОВСКАЯ</span><span class="navbar-brand-cocacolaMax"> K</span><span class="font-italic">АМЕРАТА</span></h4>
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+
+                    <div class="col-md-12"> 
+
+
+                        <div class="fontAbout">
+
+                            <p>
+                                Камерный оркестр <strong>«Московская Камерата»</strong>, являющийся одним из ведущих музыкальных
+
+                                коллективов <strong>России</strong>, был создан в <strong>1994 году</strong>. С момента основания оркестр возглавил
+
+                                выдающийся скрипач, композитор, профессор <strong>Московской</strong> консерватории, <strong> Народный артист России Игорь Фролов</strong>. 
+                                Под его управлением коллектив достиг высокого
+
+                                исполнительского мастерства, освоил разнообразный репертуар и получил
+
+                                международное признание, с большим успехом гастролируя в городах <strong>Испании, Германии, Франции и Польши</strong>. 
+                                В <strong>2007</strong> году в сопровождении коллектива проходил
+
+                                <strong>Третий тур Международного конкурса скрипичных мастеров им. П.И.Чайковского</strong>. 
+
+                                «<strong>Московская Камерата</strong>» - это всегда неповторимый исполнительский стиль, красота
+
+                                звучания, высокая ансамблевая культура и убедительность трактовки.
+                            </p>
+
+                            <p>Оркестр с неизменным успехом выступает на лучших концертных площадках <strong>Москвы</strong> –
+
+                            в <strong>Большом</strong> и <strong>Малом зале Московской консерватории</strong>, <strong>Светлановском и Камерном зале ММДМ</strong>, 
+                            на сцене театра <strong>«Новая опера» им. Е.Колобова</strong>, в <strong>Концертном зале на Моховой</strong>.
+
+                            Камерный оркестр <strong>«Московская камерата»</strong> является постоянным участником
+
+                            музыкальных фестивалей: <strong>«Кремль музыкальный», «Весна в России», «Международный Коган-фестиваль», «Время высокой музыки», «Арктический фестиваль классической музыки».</strong>
+                            
+                            </p>
+
+                           
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12 ">
+                        <div class="view overlay hm-white-slight card">
+                            <img src="/img/AboutUs_1.jpg" alt="Фото - Общее фото Московская камерата">
+                            <a>
+                                <div class="mask waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+
+                    <div class="col-md-12 ">
+                        <div class="view overlay hm-white-slight card">
+                            <img src="/img/AboutUs_2.jpg" alt="Фото - Состав Московская камерата">
+                            <a>
+                                <div class="mask waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 ">
+
+                        <div class="fontAbout">
+                            <p>
+                                Оркестр сотрудничает с лучшими солистами, среди которых <strong>Денис Мацуев, Виктор
+
+                                Пикайзен, Сергей Кравченко, Николай Саченко, Кирилл Родин, Олег Бугаев, Владимир
+
+                                Иванов, Михаил Уткин, Любовь Казарновская, Владимир Маторин, Алексей Татаринцев,
+
+                                Василий Ладюк, Илья Ушуллу</strong>.
+                            </p>
+                            <p>
+                                В <strong>2010</strong> году на должность Главного дирижера камерного оркестра <strong>«Московская камерата»</strong> приглашен <strong>Заслуженный артист России Николай Соколов</strong>.
+                            </p>
+
+                            <p>
+                                Репертуар коллектива обширен и включает в себя музыку для камерного оркестра от
+
+                                эпохи барокко до современных авторов. Большое место в репертуаре оркестра занимают 
+
+                                сочинения <strong>А.Вивальди, И.С.Баха, В.А.Моцарта, П.Чайковского, И.Фролова и А.Пьяццоллы</strong>. 
+                            </p>
+                            <p> 
+                                В 2014 году художественным руководителем камерного оркестра <strong>«Московская камерата»</strong>
+
+                                назначен <strong>Дмитрий Коган</strong> - выдающийся российский скрипач, <strong>Заслуженный артист России, Почетный профессор Афинской и Уральской консерваторий.</strong>
+                            </p>
+
+                            <p>
+                                <strong>В марте 2015</strong> года, в рамках проекта <strong>Дмитрия Когана «Пять великих скрипок»</strong>, состоялся 
+
+                                концерт оркестра в одном из самых престижных залов мира - <strong>«Barbican Centre»</strong> в
+
+                                Лондоне.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+    <hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+    <div class="social-section">
+        <ul class="ulSocial">
+            <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+        </ul>
+    </div>
+
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2016 Московская камерата
+        </div>
+    </div>
+
+</footer>
