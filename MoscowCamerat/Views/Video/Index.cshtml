@@ -13,7 +13,7 @@
 {
     <style rel="stylesheet">
 
-        html,
+        /*html,
         body,
         .view {
             height: 750px;
@@ -45,14 +45,20 @@
 
         .flex-center {
             color: #fff;
-        }
+        }*/
 
         .view {
-            background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            /*background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover;
+            background-size: cover;*/
+
+            background-image: url(../img/AboutUS.jpg) !important;
+            background-size: 100% auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
         }
     </style>
 
@@ -65,7 +71,7 @@
                 <p class="textRoboto">Камерный оркестр</p>
             </li>
             <li>
-                <h1 class="textRoboto"><span class="navbar-brand-cocacolaMax">M</span><span class="font-italic">ОСКОВСКАЯ</span><span class="navbar-brand-cocacolaMax"> K</span><span class="font-italic">АМЕРАТА</span></h1>
+                <h1><span class="font-italic">МОСКОВСКАЯ</span> <span class="font-italic">КАМЕРАТА</span></h1>
             </li>
 
             <li>
@@ -78,10 +84,13 @@
     </div>
 </div>
 <footer id="events" class="page-footer center-on-small-only">
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="main-wrapper">
         <div class="container-fluid center-section">
             <section class="section extra-margins text-xs-left">
-                <h4 class="section-heading textRoboto"><span class="navbar-brand-cocacolaMax">B</span><span class="font-italic">ИДЕО</span></h4>
                 <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
                     <div class="col-md-12">
                         @Html.Partial("Video")
@@ -90,6 +99,9 @@
             </section>
         </div>
     </div>
+    <br>
+    <br>
+    <br>
 <hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
 <div class="social-section">
     <ul class="ulSocial">
@@ -97,10 +109,6 @@
     </ul>
 </div>
 
-<div class="footer-copyright">
-    <div class="container-fluid">
-        © 2016 Московская камерата
-    </div>
-</div>
+@Html.Partial("~/Views/Shared/FooterInfo.cshtml") 
 
 </footer>

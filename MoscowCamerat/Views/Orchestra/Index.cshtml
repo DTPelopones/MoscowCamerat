@@ -16,7 +16,7 @@
 {
 <style rel="stylesheet">
 
-    html,
+    /*html,
     body,
     .view {
         height: 750px;
@@ -48,14 +48,20 @@
 
     .flex-center {
         color: #fff;
-    }
+    }*/
 
     .view {
-        background: url("../../img/MoscowCameratLogo.jpg")no-repeat center center fixed;
+        /*background: url("../../img/MoscowCameratLogo.jpg")no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover;
+        background-size: cover;*/
+
+        background-image: url(../img/MoscowCameratLogo.jpg) !important;
+        background-size: 100% auto;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
     }
 </style>
     @Scripts.Render("~/bundles/photoswipejs")
@@ -68,7 +74,7 @@
                 <p class="textRoboto">Камерный оркестр</p>
             </li>
             <li>
-                <h1 class="textRoboto"><span class="navbar-brand-cocacolaMax">M</span><span class="font-italic">ОСКОВСКАЯ</span><span class="navbar-brand-cocacolaMax"> K</span><span class="font-italic">АМЕРАТА</span></h1>
+                <h1><span class="font-italic">МОСКОВСКАЯ</span> <span class="font-italic">КАМЕРАТА</span></h1>
             </li>
             <li>
                 <div id="aEvents" class="container-fluid text-xs-center" style="height: 350px;">
@@ -89,7 +95,7 @@
                                 <img src="/img/Orchestra/ArtDirector/Kogan_m.jpg" class="img-fluid cropMK" alt="Фото - Художественный руководитель Дмитрий Коган">
                             </a>
                             <div class="stripe light">
-                                <p>Художественный<br />руководитель</p>
+                                <p>Художественный руководитель</p>
                                 <p>ДМИТРИЙ КОГАН</p>
                             </div>
                         </div>
@@ -102,7 +108,7 @@
                                 <img src="/img/Orchestra/Kapellmeister/NikolayPetrovich_m.jpg" class="img-fluid cropMK" alt="Фото - Главный дирижер Николай Соколов">
                             </a>
                             <div class="stripe light">
-                                <p>Главный<br />дирижер</p>
+                                <p>Главный дирижер</p>
                                 <p>НИКОЛАЙ СОКОЛОВ</p>
                             </div> 
                         </div>
@@ -342,7 +348,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-5 col-xl-5 mb-r">
                         <div class="card collection-card z-depth-1-half">
                             <div class="viewImage  hm-zoom">
-                                <a href="/img/Orchestra/Cello/MorchenkoAvatar.jpg" data-size="3681x3296" data-med="/img/Orchestra/Cello/MorchenkoAvatar.jpg" data-med-size="3681x3296">
+                                <a href="/img/Orchestra/Cello/MorchenkoAvatar.jpg" data-size="2681x3296" data-med="/img/Orchestra/Cello/MorchenkoAvatar.jpg" data-med-size="2681x3296">
                                     <img src="/img/Orchestra/Cello/MorchenkoAvatar_m.jpg" class="img-fluid cropMK" alt="Фото - ЛЮДМИЛА МОРЧЕНКО">
                                 </a>
                                 <div class="stripeFirstLine light">
@@ -379,17 +385,14 @@
         </section>
     </div>
     @Html.Partial("~/Views/PhotoSwipe/PhotoSwipePart.cshtml")
-    <hr>
+    <hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
     <div class="social-section">
         <ul class="ulSocial">
             <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
         </ul>
     </div>
-    <div class="footer-copyright">
-        <div class="container-fluid">
-            © 2016 Московская камерата
-        </div>
-    </div>
+    @Html.Partial("~/Views/Shared/FooterInfo.cshtml")
+    
 </footer>
 
 @Scripts.Render("~/bundles/photoswipemanjs")

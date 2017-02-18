@@ -211,6 +211,7 @@
     <Content Include="fonts\materialdesignicons-webfont.svg" />
     <Content Include="img\20170114.jpg" />
     <Content Include="img\20170114m.jpg" />
+    <Content Include="img\AboutUS.jpg" />
     <Content Include="img\AboutUs_1.jpg" />
     <Content Include="img\AboutUS_2.jpg" />
     <Content Include="img\Afisha\20140914.jpg" />
@@ -227,6 +228,8 @@
     <Content Include="img\Afisha\20161224m.jpg" />
     <Content Include="img\Afisha\20170114.jpg" />
     <Content Include="img\Afisha\20170114m.jpg" />
+    <Content Include="img\Department.png" />
+    <Content Include="img\Main.png" />
     <Content Include="img\MoscowCameratLogo.jpg" />
     <Content Include="img\audio\entypo-25px-ffffff\PNG\arrow.png" />
     <Content Include="img\audio\entypo-25px-ffffff\PNG\cart.png" />
@@ -490,6 +493,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\PRODUCTION.pubxml" />
+    <Content Include="Views\Shared\FooterInfo.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

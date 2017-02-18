@@ -1,55 +1,113 @@
 ﻿@{
-    ViewBag.Title = "Нет доступа - Александра Федотова";
+    ViewBag.Title = "Доступ к запрашиваемой странице запрещен - \"Московская Камерата\"";
 }
 
 @section metatags
 {
-    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="keywords" content="Московская камерата, оркестр, камерный оркестр, контакты оркестра Московская камерата " />
+    <meta name="description" content="Камерный оркестр " Московская камерата" - контакты" />
+    @Styles.Render("~/bundles/violincss")
 }
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">
-                403
-                <small>доступ запрещен</small>
-            </h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <p class="error-404">403</p>
-            <p class="lead">Доступ к запрашиваемой странице запрещен.</p>
-            <p>Вот некоторые полезные ссылки, которые помогут вам найти то, что вы ищете:</p>
-            <ul>
-                <li>
-                    @Html.ActionLink("ОБО МНЕ", "Index", "Biography")
-                </li>
-                <li>
-                    @Html.ActionLink("АФИША", "Index", "Afisha") 
-                </li>
-                <li>
-                    @Html.ActionLink("ОРКЕСТР", "Index", "Orchestra") 
-                </li>
-                <li>
-                    @Html.ActionLink("ФОТО", "Index", "Mediya")
-                </li>
-                <li>
-                    @Html.ActionLink("ВИДЕО", "Index", "Video")
-                </li>
-                <li>
-                    @Html.ActionLink("АУДИО", "Index", "Audio") 
-                </li>
-                <li>
-                    @Html.ActionLink("НОВОСТИ", "Index", "News") 
-                </li>
-                <li>
-                    @Html.ActionLink("УРОКИ", "Index", "Lessons") 
-                </li>
-                <li>
-                    @Html.ActionLink("КОНТАКТЫ", "Index", "Contact")
-                </li>
-            </ul>
-        </div>
+@section head
+{
+
+
+    <style rel="stylesheet">
+        html,
+        body,
+        .view {
+            height: 1330px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        viewImage {
+            height: 406px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }
+
+        .view {
+            background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/jqueryunobtrusiveajaxjs")
+    @Scripts.Render("~/bundles/jqueryvalidatejs")
+    @Scripts.Render("~/bundles/jqueryvalidateunobtrusivejs")
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulNotForbidden">
+            <li class="nav-item">
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 150px;">
+                    <p class="error-404">403</p>
+                    <p class="lead">Доступ к запрашиваемой странице запрещен.</p>
+                    <p>Вот некоторые полезные ссылки, которые помогут вам найти то, что вы ищете:</p>
+                </div>
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("О НАС", "Index", "Biography", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("ОРКЕСТР", "Index", "Orchestra", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("АФИША", "Index", "Afisha", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("ВИДЕО", "Index", "Video", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("ФОТО", "Index", "Mediya", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("КОНТАКТЫ", "Index", "Contact", new { }, new { @class = "nav-link " })
+            </li>
+        </ul>
     </div>
 </div>
+
+<footer id="events" class="page-footer center-on-small-only">
+
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left"></section>
+
+        </div>
+    </div>
+    @Html.Partial("~/Views/Shared/FooterInfo.cshtml")
+
+</footer>

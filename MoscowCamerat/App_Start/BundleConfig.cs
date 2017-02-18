@@ -16,7 +16,7 @@ namespace MoscowCamerat
                         "~/js/jquery-3.1.1.min.js"
                         ));
 
-            bundles.Add(new LicensedScriptBundle("~/bundles/ajaxjs", "http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js").Include(
+            bundles.Add(new LicensedScriptBundle("~/bundles/ajaxjs"/*, "http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js"*/).Include(
                         "~/js/jquery.unobtrusive-ajax.min.js" 
                         ));  
 
@@ -24,7 +24,7 @@ namespace MoscowCamerat
                         "~/js/jquery.validate.min.js"
                         )); 
 
-            bundles.Add(new LicensedScriptBundle("~/bundles/jqueryunobtrusiveajaxjs", "http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js").Include(
+            bundles.Add(new LicensedScriptBundle("~/bundles/jqueryunobtrusiveajaxjs"/*, "http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js"*/).Include(
                         "~/js/jquery.unobtrusive-ajax.min.js"
                         ));
 

@@ -11,11 +11,9 @@
 
 @section head
 {
-
-
     <style rel="stylesheet">
 
-        html,
+        /*html,
         body,
         .view {
             height: 700px;
@@ -47,20 +45,27 @@
 
         .flex-center {
             color: #fff;
-        }
+        }*/
 
         .view {
-            background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            /*background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover;
+            background-size: cover;*/
+
+            background-image: url(../img/AboutUS.jpg) !important;
+            background-size: 100% auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
         }
     </style>
 
     @Scripts.Render("~/bundles/jqueryunobtrusiveajaxjs")
     @Scripts.Render("~/bundles/jqueryvalidatejs")
-    @Scripts.Render("~/bundles/jqueryvalidateunobtrusivejs")
+    @Scripts.Render("~/bundles/jqueryvalidateunobtrusivejs") 
+    
 }
 
 <div class="view hm-black-strong">
@@ -70,44 +75,55 @@
                 <div id="aEvents" class="container-fluid text-xs-center" style="height: 0px;">
                     <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin contactsMK" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
                 </div>
-            <li>
+            @*<li>
                 @Html.Partial("Feedback", new MoscowCamerat.Models.EmailModel())
-            </li>
+            </li>*@
         </ul>
     </div>
 </div>
 
 <footer id="events" class="page-footer center-on-small-only">
-
     <div class="main-wrapper">
         <div class="container-fluid center-section">
             <section class="section extra-margins text-xs-left">
 
-                <h4 class="section-heading textRoboto"><span class="navbar-brand-cocacolaMax">K</span><span class="font-italic">ОНТАКТЫ</span></h4>
+                @Html.Partial("Feedback", new MoscowCamerat.Models.EmailModel())
+
+                <h4 class="section-heading textRoboto"><span class="font-italic">KОНТАКТНАЯ ИНФОРМАЦИЯ</span></h4>
 
                 <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
-                    <div class="col-lg-4 fontContactPart1">
-                        <h4 class="fontContactPart">Россия, Москва</h4>
-                        <i class="fa fa-envelope-o"></i><abbr class="fontContactPart1" title="Email"> Email</abbr>: <a href="mailto:moscow.camerata@gmail.com">moscow.camerata@gmail.com</a>
+                    <div class="col-lg-6 fontContactPart1">
+                        @*<h4 class="fontContactPart">Россия, Москва</h4>*@
+                        Почтовый адрес: 
                     </div>
-                    <div class="col-lg-4 fontContactPart1">
-                        <h4>Социальные сети</h4>
-                        <div class="social-section">
-                            <ul class="ulSocial">
-                                <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
-                            </ul>
+                    <div class="col-lg-6 fontContactPart1">
+                        @*<h4 class="fontContactPart"><i class="fa"></i>Веб сайты</h4>*@
+                        Москва, Ленинградский пр-т, 30/2 
+                    </div>
+                </div>
+                
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                    <div class="col-lg-6 fontContactPart1">
+                        Телефон:
+                    </div>
+                    <div class="col-lg-6 fontContactPart1">
+                        <div class="call">
+                            <span><i class="fa fa-phone"> </i></span> +7 903 626 99 36
                         </div>
-                    </div>
-                    <div class="col-lg-4 fontContactPart1">
-                        <h4 class="fontContactPart"><i class="fa"></i>Веб сайты</h4>
-                        <a title="Mosconcert" data-placement="bottom" data-toggle="tooltip" href="http://www.mosconcert.com/"><i class="fa fontContactPart1">mosconcert.com</i></a>
-                        <br />
-                        <a title="dmitrikogan" data-placement="bottom" data-toggle="tooltip" href="http://dmitrikogan.ru/"><i class="fa fontContactPart1">dmitrikogan.ru</i></a>
-                        <br />
-                        <a title="aleksandrafedotova" data-placement="bottom" data-toggle="tooltip" href="http://aleksandrafedotova.ru" ><i class="fa fontContactPart1">aleksandrafedotova.ru</i></a>
                     </div>
                 </div>
 
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                    <div class="col-lg-6 fontContactPart1">
+                        e-mail: 
+                    </div>
+                    <div class="col-lg-6 fontContactPart1">
+                        <a href="mailto:kamerata@yandex.ru">kamerata@yandex.ru</a>, <a href="mailto:moscow.camerata@gmail.com">moscow.camerata@gmail.com</a>, 
+                        <a title="Mosconcert" data-placement="bottom" data-toggle="tooltip" href="http://www.mosconcert.com/"><i class="fa fontContactPart1">www.mosconcert.com</i></a>,
+                        <a title="dmitrikogan" data-placement="bottom" data-toggle="tooltip" href="http://dmitrikogan.ru/"><i class="fa fontContactPart1">www.dmitrikogan.ru</i></a>,
+                        <a title="aleksandrafedotova" data-placement="bottom" data-toggle="tooltip" href="http://aleksandrafedotova.ru"><i class="fa fontContactPart1">www.aleksandrafedotova.ru</i></a>
+                    </div>
+                </div>
                 <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
 
                     <div class="col-lg-12">
@@ -119,12 +135,15 @@
             </section>
 
         </div>
+    </div> 
+
+    <hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+    <div class="social-section">
+        <ul class="ulSocial">
+            <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+        </ul>
     </div>
-    <hr />
-<div class="footer-copyright">
-    <div class="container-fluid">
-        © 2016 Московская камерата
-    </div>
-</div>
+
+    @Html.Partial("~/Views/Shared/FooterInfo.cshtml") 
 
 </footer>

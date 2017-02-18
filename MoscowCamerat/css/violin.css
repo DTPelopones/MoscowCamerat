@@ -3,7 +3,7 @@
 	font-family: Tahoma;
 }*/
 
-p {
+.fontAbout p {
     text-indent: 20px; /* Отступ первой строки в пикселах */
    }
 
@@ -318,9 +318,9 @@ header {
         margin-top: -17rem;
     }
 
-    .card-block-contacts-MK {
+    /*.card-block-contacts-MK {
         margin-top: -7rem;
-    }
+    }*/
 }
 
 @media(min-width: 561px) /*and (min-width: 392px)*/  {
@@ -328,8 +328,8 @@ header {
         margin-top: -1rem;
     }
 
-    .card-block-contacts-MK {
+    /*.card-block-contacts-MK {
         margin-top: 1rem;
-    }
+    }*/
 }
 

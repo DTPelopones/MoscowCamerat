@@ -374,6 +374,12 @@ dl {
   margin-bottom: -6rem;
 }
 
+.ulNotForbidden
+{
+  margin-top: 0;
+  margin-bottom: -6rem;
+}
+
 .ulSocial
 {
   margin-top: 0;
@@ -597,7 +603,7 @@ h6, .h6 {
 }
 
 hr {
-  /*margin-top: 1rem;*/
+  margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -3956,7 +3962,11 @@ tbody.collapse.in {
     float: none;
   }
   .ulOrchestra {
-    margin-top: -3rem;
+    /*margin-top: -3rem;*/
+    margin-top: 17rem;
+  }
+  .ulNotForbidden {
+    margin-top: -52rem;
   }
   .navbar-brand-cocacolaMax {
     font-size: 74px;
@@ -4269,6 +4279,7 @@ tbody.collapse.in {
 
 .card-block {
   padding: 1.25rem;
+  color: whitesmoke; 
 }
 
 .card-block::after {
@@ -6714,6 +6725,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /* Smartphones (горизонтальная) ----------- */
 @media (orientation: landscape) {
   .ulOrchestra {
+    /*margin-bottom: 6rem;*/
+    margin-bottom: -23rem;
+  }
+  .ulNotForbidden {
     margin-bottom: 6rem;
   }
 }
@@ -6765,6 +6780,10 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
    .ulOrchestra {
     margin-bottom: 1rem; 
   }
+
+   .ulNotForbidden {
+    margin-bottom: 1rem; 
+  }
 }
 
 
@@ -6807,6 +6826,17 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   .hidden-print {
     display: none !important;
   }
+}
+
+.ulNotForbidden a {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: "Coca cola ii";
+  font-weight: 500;
+  src: url('../fonts/Coca-cola.otf');
 }
 
 

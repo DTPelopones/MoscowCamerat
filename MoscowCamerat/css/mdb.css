@@ -48,6 +48,36 @@ a:hover {
     text-decoration: none
 }
 
+html,
+body,
+.view {
+    height: 800px;
+    background-color: rgb(76, 76, 170);
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.top-nav-collapse {
+    background-color: #1C2331;
+}
+
+footer.page-footer {
+    background-color: #1C2331;
+    margin-top: -1px;
+}
+
+.flex-center {
+    color: #fff;
+}
+
 .pswp__container,
 .pswp__img,
 .waves-effect,
@@ -3040,36 +3070,36 @@ h6 {
 
 @font-face {
     font-family: Roboto;
-    src: local(Roboto Thin), url(../../fonts/roboto/Roboto-Thin.eot);
-    src: url(../../fonts/roboto/Roboto-Thin.eot?#iefix) format("embedded-opentype"), url(../../fonts/roboto/Roboto-Thin.woff2) format("woff2"), url(../../fonts/roboto/Roboto-Thin.woff) format("woff"), url(../../fonts/roboto/Roboto-Thin.ttf) format("truetype");
+    src: local(Roboto Thin), url(../fonts/roboto/Roboto-Thin.eot);
+    src: url(../fonts/roboto/Roboto-Thin.eot?#iefix) format("embedded-opentype"), /*url(../fonts/roboto/Roboto-Thin.woff2) format("woff2"),*/ url(../fonts/roboto/Roboto-Thin.woff) format("woff"), url(../fonts/roboto/Roboto-Thin.ttf) format("truetype");
     font-weight: 200
 }
 
 @font-face {
     font-family: Roboto;
-    src: local(Roboto Light), url(../../fonts/roboto/Roboto-Light.eot);
-    src: url(../../fonts/roboto/Roboto-Light.eot?#iefix) format("embedded-opentype"), url(../../fonts/roboto/Roboto-Light.woff2) format("woff2"), url(../../fonts/roboto/Roboto-Light.woff) format("woff"), url(../../fonts/roboto/Roboto-Light.ttf) format("truetype");
+    src: local(Roboto Light), url(../fonts/roboto/Roboto-Light.eot);
+    src: url(../fonts/roboto/Roboto-Light.eot?#iefix) format("embedded-opentype"), /*url(../fonts/roboto/Roboto-Light.woff2) format("woff2"),*/ url(../fonts/roboto/Roboto-Light.woff) format("woff"), url(../fonts/roboto/Roboto-Light.ttf) format("truetype");
     font-weight: 300
 }
 
 @font-face {
     font-family: Roboto;
-    src: local(Roboto Regular), url(../../fonts/roboto/Roboto-Regular.eot);
-    src: url(../../fonts/roboto/Roboto-Regular.eot?#iefix) format("embedded-opentype"), url(../../fonts/roboto/Roboto-Regular.woff2) format("woff2"), url(../../fonts/roboto/Roboto-Regular.woff) format("woff"), url(../../fonts/roboto/Roboto-Regular.ttf) format("truetype");
+    src: local(Roboto Regular), url(../fonts/roboto/Roboto-Regular.eot);
+    src: url(../fonts/roboto/Roboto-Regular.eot?#iefix) format("embedded-opentype"), /*url(../fonts/roboto/Roboto-Regular.woff2) format("woff2"),*/ url(../fonts/roboto/Roboto-Regular.woff) format("woff"), url(../fonts/roboto/Roboto-Regular.ttf) format("truetype");
     font-weight: 400
 }
 
 @font-face {
     font-family: Roboto;
-    src: url(../../fonts/roboto/Roboto-Medium.eot);
-    src: url(../../fonts/roboto/Roboto-Medium.eot?#iefix) format("embedded-opentype"), url(../../fonts/roboto/Roboto-Medium.woff2) format("woff2"), url(../../fonts/roboto/Roboto-Medium.woff) format("woff"), url(../../fonts/roboto/Roboto-Medium.ttf) format("truetype");
+    src: url(../fonts/roboto/Roboto-Medium.eot);
+    src: url(../fonts/roboto/Roboto-Medium.eot?#iefix) format("embedded-opentype"), /*url(../fonts/roboto/Roboto-Medium.woff2) format("woff2"),*/ url(../fonts/roboto/Roboto-Medium.woff) format("woff"), url(../fonts/roboto/Roboto-Medium.ttf) format("truetype");
     font-weight: 500
 }
 
 @font-face {
     font-family: Roboto;
-    src: url(../../fonts/roboto/Roboto-Bold.eot);
-    src: url(../../fonts/roboto/Roboto-Bold.eot?#iefix) format("embedded-opentype"), url(../../fonts/roboto/Roboto-Bold.woff2) format("woff2"), url(../../fonts/roboto/Roboto-Bold.woff) format("woff"), url(../../fonts/roboto/Roboto-Bold.ttf) format("truetype");
+    src: url(../fonts/roboto/Roboto-Bold.eot);
+    src: url(../fonts/roboto/Roboto-Bold.eot?#iefix) format("embedded-opentype"), /*url(../fonts/roboto/Roboto-Bold.woff2) format("woff2"),*/ url(../fonts/roboto/Roboto-Bold.woff) format("woff"), url(../fonts/roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: 700
 }
 
@@ -8754,7 +8784,7 @@ i.btn-danger {
 }
 
 footer.page-footer {
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     padding-top: 20px;
     background-color: #3E4551;
     /*color: #fff*/
@@ -10533,7 +10563,7 @@ input[type=range]:focus::-ms-fill-upper {
     position: relative;
     overflow: hidden;
     z-index: 1;
-    width: 53px;
+    width: 64px;
     height: 41px;
     /*padding: 0;*/
     padding: 10px 11px 0px 0px;
@@ -17354,11 +17384,283 @@ button.picker__today:focus {
 }
 
 .nav-item .navbar-brand-cocacola{
-    width: 3.6rem;
+    width: 4.3rem;
 }
 
 .navbar-dark .navbar-nav .nav-link.active,
 .nav.navbar-nav .navbar-brand-cocacola.navbar-toggler.active
 {
     font-weight: bold;
+}
+
+
+
+/*@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .view {
+        background-image: url(../img/Main.png) !important;
+        background-size: 100% auto;
+    }
+    html, body, .view {
+        background-color: rgb(76, 76, 170);
+    }
+    h1, .h1 {
+  font-size: 1.5rem;
+}
+.navbar-brand-cocacolaMax {
+  font-size: 50px;
+  font-family: 'Coca cola ii';
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+}*/
+
+@media (orientation: landscape) { 
+    .view { 
+        height: 24rem; 
+    } 
+} 
+
+@media  (orientation: portrait) { 
+    .view { 
+        height: 13rem; 
+    }
+    h1, .h1 {
+    font-size: 1.7rem;
+    }
+   .ulOrchestra {
+        margin-top: 2rem;
+        /*margin-bottom: -6rem;*/
+    }
+} 
+
+@media screen 
+  and (min-device-width: 1200px) 
+  /*and (max-device-width: 1600px)*/ 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+        .view { 
+        height: 13rem; 
+    }
+    h1, .h1 {
+    font-size: 1.7rem;
+    }
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  /*and (max-device-width: 1600px)*/ 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+        .view { 
+        height: 57rem; 
+    }
+    h1, .h1 {
+    font-size: 3.7rem;
+    font-weight: bold; 
+    }
+}
+
+
+/* Portrait iPhone 5*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    h1, .h1 {
+    font-size: 1.7rem;
+}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+        .view { 
+        height: 18rem; 
+    } 
+    .ulOrchestra {
+        margin-top: 0;
+        margin-bottom: -26rem;
+    }
+}
+
+/* Portrait 7 plus*/
+/*@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+            .view { 
+        height: 13rem; 
+    } 
+    h1, .h1 {
+    font-size: 1.9rem;
+}
+        .ulOrchestra {
+        margin-top: 0;
+        margin-bottom: -26rem;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+                .view { 
+        height: 21rem; 
+    } 
+    h1, .h1 {
+    font-size: 2.5rem;
+    font-weight: bold; 
+}
+        .ulOrchestra {
+        margin-top: 0;
+        margin-bottom: -26rem;
+    }
+}*/
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+/*@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}*/
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+            .view { 
+        height: 13rem; 
+    } 
+    h1, .h1 {
+    font-size: 1.9rem;
+}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+                .view { 
+        height: 21rem; 
+    } 
+    h1, .h1 {
+    font-size: 2.5rem;
+    font-weight: bold; 
+}
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+/*@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}*/
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+                    .view { 
+        height: 14rem; 
+    } 
+    h1, .h1 {
+    font-size: 2.2rem;
+    font-weight: bold; 
+}
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+                    .view { 
+        height: 23rem; 
+    } 
+    h1, .h1 {
+    font-size: 2.5rem;
+    font-weight: bold; 
+}
+}
+
+/* Portrait iPad*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait)  {
+    .view {
+        height: 27rem;
+    }
+
+    .ulOrchestra {
+        margin-top: 0;
+        margin-bottom: -26rem;
+    }
+
+    h1, .h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: landscape)  {
+
+    .ulOrchestra {
+    margin-bottom: -24rem;
+    }
+
+    .view {
+    height: 36rem;
+    }
+
+    h1, .h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1366px) { 
+
+        .ulOrchestra {
+    margin-bottom: -24rem;
+    }
+
+    .view {
+    height: 42rem;
+    }
+    .textRoboto {
+    font-size: 2.5rem;
+}
+    h1, .h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+
 }
