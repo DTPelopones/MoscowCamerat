@@ -1,6 +1,9 @@
 ﻿
 @section head
 {
+    @Scripts.Render("~/bundles/photoswipejs")
+    @Styles.Render("~/bundles/photoswipecss")
+
     <style rel="stylesheet">
 
         /*html,
@@ -51,6 +54,7 @@
     </style>
 }
 
+
 <div class="view hm-black-strong">
     <div class="full-bg-img flex-center">
         <ul class="animated fadeInUp ulOrchestra">
@@ -80,31 +84,30 @@
 
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-cascade wider">
-                        <div class="view overlay hm-white-slight">
-                            <img src="../../img/20170114m.jpg" class="img-fluid">
-                            <a>
-                                <div class="mask waves-effect waves-light"></div>
-                            </a>
-                        </div>
-                        <div class="card-block text-xs-center" style="color: #3f729b;">
-                            <h4 class="card-title"><strong>14 Января</strong></h4>
-                            <h3>ВЕЧЕР ПАМЯТИ</h3>
-                            <p class="card-text">ул. Пушечная, 4, стр. 2</p>
-                        </div>
-
-
+                        <iframe width="100%" src="https://www.youtube.com/embed/0cnnOZb3394" frameborder="0" allowfullscreen></iframe>
                     </div>
+
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                            <div id="demo-test-gallery" class="demo-gallery container-flex" data-pswp-uid="1">
+                                <a href="../../img/20170321.jpg" data-size="600x847" data-med="../../img/20170321.jpg" data-med-size="600x847" class="">
+                                    <img src="../../img/20170321m.jpg" class="" alt="День Рождения И. С. Баха">
+                                </a>
+                            </div>
+                            @Html.Partial("~/Views/PhotoSwipe/PhotoSwipePart.cshtml")
 
 
                 </div>
 
             </div>
 
+
+
         </section>
 
     </div>
-
-
+    <br />
     <hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
     <div class="social-section">
         <ul class="ulSocial">
@@ -115,3 +118,5 @@
     @Html.Partial("~/Views/Shared/FooterInfo.cshtml") 
 
 </footer>
+
+@Scripts.Render("~/bundles/photoswipemanjs")

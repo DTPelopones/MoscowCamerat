@@ -201,6 +201,15 @@
     <Compile Include="ViewModels\AccountViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\20170321.jpg" />
+    <Content Include="img\20170321m.jpg" />
+    <Content Include="img\Afisha\20170127.jpg" />
+    <Content Include="img\Afisha\20170127m.jpg" />
+    <Content Include="img\Afisha\20170321.jpg" />
+    <Content Include="img\Afisha\20170321m.jpg" />
+    <Content Include="img\Afisha\20170408.jpg" />
+    <Content Include="img\Afisha\20170408m.jpg" />
+    <Content Include="sitemap.xml" />
     <Content Include="App_Data\SQL\CreateLogin.sql" />
     <Content Include="App_Data\SQL\fn_login.sql" />
     <Content Include="css\font-awesome.min.css" />
@@ -228,6 +237,10 @@
     <Content Include="img\Afisha\20161224m.jpg" />
     <Content Include="img\Afisha\20170114.jpg" />
     <Content Include="img\Afisha\20170114m.jpg" />
+    <Content Include="img\Afisha\20170517.jpg" />
+    <Content Include="img\Afisha\20170517m.jpg" />
+    <Content Include="img\Afisha\20170519.jpg" />
+    <Content Include="img\Afisha\20170519m.jpg" />
     <Content Include="img\Department.png" />
     <Content Include="img\Main.png" />
     <Content Include="img\MoscowCameratLogo.jpg" />
