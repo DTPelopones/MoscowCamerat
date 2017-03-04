@@ -209,6 +209,10 @@
     <Content Include="img\Afisha\20170321m.jpg" />
     <Content Include="img\Afisha\20170408.jpg" />
     <Content Include="img\Afisha\20170408m.jpg" />
+    <Content Include="img\Afisha\20170530.jpg" />
+    <Content Include="img\Afisha\20170530_m.jpg" />
+    <Content Include="img\Orchestra\Cello\NikolayPavlinov.jpg" />
+    <Content Include="img\Orchestra\Cello\NikolayPavlinov_m.jpg" />
     <Content Include="sitemap.xml" />
     <Content Include="App_Data\SQL\CreateLogin.sql" />
     <Content Include="App_Data\SQL\fn_login.sql" />

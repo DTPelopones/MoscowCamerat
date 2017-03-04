@@ -17431,7 +17431,6 @@ button.picker__today:focus {
     }
    .ulOrchestra {
         margin-top: 2rem;
-        /*margin-bottom: -6rem;*/
     }
 } 
 
@@ -17665,13 +17664,16 @@ and (max-device-width : 1366px) {
     height: 42rem;
     }
     .textRoboto {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
     h1, .h1 {
         font-size: 4.5rem;
         font-weight: bold;
     }
+              a.crop {
+    margin: 5px 7px;
 
+} 
 
 }
 
@@ -17715,6 +17717,7 @@ and (max-device-width : 1366px) {
     }
 }
 
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
@@ -17745,9 +17748,38 @@ and (max-device-width : 1366px) {
   /* Styles */
 }
 
+@media only screen and (min-device-width: 384px) and (max-device-height: 640px) and (orientation: portrait) {
+  /* Styles */
+  .ulOrchestra {
+    margin-top: 16rem;
+}
+      h1, .h1 {
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+}
+
+
+@media only screen and (min-device-width: 384px) and (max-device-height: 640px) and (orientation: landscape) {
+  /* Styles */
+  .ulOrchestra {
+    margin-top: -6rem;
+}
+      h1, .h1 {
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+
+      a.crop {
+    margin: 5px 7px;
+
+}
+}
+
 /* iPad 3 (landscape) ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   /* Styles */
+
 }
 
 /* iPad 3 (portrait) ----------- */
@@ -17757,12 +17789,332 @@ and (max-device-width : 1366px) {
 
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1224px) {
+    .center-section {
+        width: 1000px;
+    }
+    .ulOrchestra {
+        margin-bottom: -24rem;
+        font-size: 2.5rem;
+    }
+    .btn-floating {
+            width: 135px;
+            height: 53px;
+                padding: 15px 11px 0 0;
+    }
 
+    .navbar-brand-cocacolaMin {
+        font-size: 37px;
+    }
+      body {
+        font-size: 2rem;
+        /*line-height: 0;*/ 
+    }
+      .fontAbout {
+        font-size: 1.8rem;
+    }
+
+      .stripeFirstLine p {
+    font-size: 1rem;
+}
+
+    .view {
+    height: 86rem;
+    }
+
+    .navbar-brand-cocacola {
+        font-size: 31px;
+        padding: 1.1rem 0.8rem;
+    }
+    .nav-item .navbar-brand-cocacola {
+        width: 5.7rem;
+    }
+    h1, .h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+    footer.page-footer .footer-copyright {
+        font-size: 1.6rem;
+        height: 5rem; 
+    }
+}
+
+
+
+@media only screen and (min-device-width: 1440px) and (min-device-height: 900px) and (orientation: landscape) {
+  /* Styles */
+          .ulOrchestra {
+    margin-bottom: -24rem;
+    }
+
+    .view {
+    height: 51rem;
+    }
+
+    h1, .h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+    .btn-floating.btn-small, .btn-floating.wishlist, .card .card-share .social-reveal .btn-floating {
+    height: 67px;
+    width: 67px;
+}
+    .btn-floating.btn-small .fa, .btn-floating.btn-small .material-icons, .btn-floating.wishlist .fa, .btn-floating.wishlist .material-icons, .card .card-share .social-reveal .btn-floating .fa, .card .card-share .social-reveal .btn-floating .material-icons {
+    font-size: 33px;
+    margin-top: 10px;
+}
+          a.crop {
+    margin: 5px 7px;
+
+} 
+          .fontContact {
+    font-size: 2.7rem;
+}
+.md-form label {
+    font-size: 1.5rem;
+}
+.btn {
+    font-size: 1.8rem;
+}
+
+.fontContactPart1 {
+    font-size: 1.6rem;
+}
 }
 
 /* Large screens ----------- */
 @media only screen and (min-width: 1824px) {
-  /* Styles */
+      .center-section {
+        width: 1000px;
+    }
+    .ulOrchestra {
+        margin-bottom: -24rem;
+        font-size: 1.5rem;
+    }
+    .btn-floating {
+    width: 77px;
+    height: 49px;
+    padding: 15px 11px 0 0;
+    }
+
+    .navbar-brand-cocacolaMin {
+        font-size: 22px;
+    }
+      body {
+        font-size: 1rem;
+        /*line-height: 0;*/ 
+    }
+      .fontAbout {
+        font-size: 1.8rem;
+    }
+
+      .stripeFirstLine p {
+    font-size: 1rem;
+}
+
+    .view {
+    height: 56rem;
+    }
+
+    .navbar-brand-cocacola {
+        font-size: 1rem;
+        padding: 0.8rem .8rem;
+    }
+    .nav-item .navbar-brand-cocacola {
+        width: 3.7rem;
+    }
+    h1, .h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    footer.page-footer .footer-copyright {
+        font-size: 1rem;
+        height: 3rem; 
+    }
+}
+
+@media only screen and (min-width: 2559px) {
+    .center-section {
+        width: 1150px;
+    }
+    .ulOrchestra {
+        margin-bottom: -24rem;
+        font-size: 2.5rem;
+    }
+    .btn-floating {
+            width: 135px;
+            height: 53px;
+                padding: 15px 11px 0 0;
+    }
+
+    .navbar-brand-cocacolaMin {
+        font-size: 37px;
+    }
+      body {
+        font-size: 2rem;
+        /*line-height: 0;*/ 
+    }
+      .fontAbout {
+        font-size: 1.8rem;
+    }
+
+      .stripeFirstLine p {
+    font-size: 1rem;
+}
+
+    .view {
+    height: 86rem;
+    }
+
+    .navbar-brand-cocacola {
+        font-size: 31px;
+        padding: 1.1rem 0.8rem;
+    }
+    .nav-item .navbar-brand-cocacola {
+        width: 5.7rem;
+    }
+    h1, .h1 {
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+
+    footer.page-footer .footer-copyright {
+        font-size: 1.6rem;
+        height: 5rem; 
+    }
+}
+
+
+@media only screen and (min-device-width: 1280px) and (min-device-width: 800px) and (orientation: landscape) {
+         .ulOrchestra {
+    margin-bottom: -24rem;
+    }
+
+    .view {
+    height: 43rem;
+    }
+
+    h1, .h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .textRoboto {
+        font-size: 1.5rem;
+    }
+
+    .btn-floating.btn-small, .btn-floating.wishlist, .card .card-share .social-reveal .btn-floating {
+    height: 57px;
+    width: 57px;
+}
+    .btn-floating.btn-small .fa, .btn-floating.btn-small .material-icons, .btn-floating.wishlist .fa, .btn-floating.wishlist .material-icons, .card .card-share .social-reveal .btn-floating .fa, .card .card-share .social-reveal .btn-floating .material-icons {
+    font-size: 33px;
+    margin-top: 10px;
+}
+          a.crop {
+    margin: 5px 7px;
+
+} 
+          .fontContact {
+    font-size: 2rem;
+}
+.md-form label {
+    font-size: 1rem;
+}
+.btn {
+    font-size: 1.2rem;
+}
+
+.fontContactPart1 {
+    font-size: 1.3rem;
+}
+
+body {
+    font-size: 1rem;
+}
+.navbar-brand-cocacola {
+    font-size: 1rem;
+    padding: 0.89rem 0rem;
+}
+
+.nav-item .navbar-brand-cocacola {
+    width: 3.7rem;
+}
+.btn-floating {
+    width: 67px;
+    height: 46px;
+    padding: 15px 11px 0 0;
+}
+.navbar-brand-cocacolaMin {
+    font-size: 21px;
+}
+
+    footer.page-footer .footer-copyright {
+        font-size: 1rem;
+        height: 3rem; 
+    }
+    .fontAbout {
+    font-size: 1.1rem;
+}
+        .center-section {
+        width: 1000px;
+    }
+.stripeFirstLine p {
+    font-size: 0.5rem;
+}
+}
+
+@media only screen and (min-device-width: 1920px) and (min-device-width: 1080px) and (orientation: landscape) {
+          .center-section {
+        width: 1000px;
+    }
+    .ulOrchestra {
+        margin-bottom: -24rem;
+        font-size: 1.5rem;
+    }
+    .btn-floating {
+    width: 77px;
+    height: 49px;
+    padding: 15px 11px 0 0;
+    }
+
+    .navbar-brand-cocacolaMin {
+        font-size: 22px;
+    }
+      body {
+        font-size: 1rem;
+        /*line-height: 0;*/ 
+    }
+      .fontAbout {
+        font-size: 1.8rem;
+    }
+
+      .stripeFirstLine p {
+    font-size: 1rem;
+}
+
+    .view {
+    height: 56rem;
+    }
+
+    .navbar-brand-cocacola {
+        font-size: 1rem;
+        padding: 0.8rem .8rem;
+    }
+    .nav-item .navbar-brand-cocacola {
+        width: 3.7rem;
+    }
+    h1, .h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    footer.page-footer .footer-copyright {
+        font-size: 1rem;
+        height: 3rem; 
+    }
 }
 
 /* iPhone 4 (landscape) ----------- */
@@ -17783,7 +18135,9 @@ and (max-device-width : 1366px) {
 /* iPhone 5 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
   /* Styles */
+
 }
+
 
 /* iPhone 6 (landscape) ----------- */
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
@@ -17795,6 +18149,8 @@ and (max-device-width : 1366px) {
   /* Styles */
 }
 
+
+
 /* iPhone 6+ (landscape) ----------- */
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
   /* Styles */
@@ -17804,6 +18160,7 @@ and (max-device-width : 1366px) {
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
   /* Styles */
 }
+
 
 /* Samsung Galaxy S3 (landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
@@ -17821,8 +18178,31 @@ and (max-device-width : 1366px) {
     }
 }
 
+
+
 /* Samsung Galaxy S3 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+          .ulOrchestra {
+    /*margin-bottom: -11rem;*/
+    margin-top: 13rem;
+    }
+
+    .btn-floating {
+       margin: -24px 0 7px 0;
+    }
+
+    .view {
+    height: 13rem;
+    }
+
+    h1, .h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+}
+
+/* Samsung Galaxy S4 (landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
           .ulOrchestra {
     margin-bottom: -24rem;
     margin-top: 1rem;
@@ -17842,14 +18222,25 @@ and (max-device-width : 1366px) {
     }
 }
 
-/* Samsung Galaxy S4 (landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
-}
-
 /* Samsung Galaxy S4 (portrait) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-  /* Styles */
+          .ulOrchestra {
+    margin-bottom: -24rem;
+    margin-top: 1rem;
+    }
+
+    .btn-floating {
+       margin: -7px;
+    }
+
+    .view {
+    height: 13rem;
+    }
+
+    h1, .h1 {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
 }
 
 /* Samsung Galaxy S5 (landscape) ----------- */
