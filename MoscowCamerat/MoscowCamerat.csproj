@@ -203,6 +203,8 @@
   <ItemGroup>
     <Content Include="img\20170321.jpg" />
     <Content Include="img\20170321m.jpg" />
+    <Content Include="img\20170618.jpg" />
+    <Content Include="img\20170618m.jpg" />
     <Content Include="img\Afisha\20170127.jpg" />
     <Content Include="img\Afisha\20170127m.jpg" />
     <Content Include="img\Afisha\20170321.jpg" />
@@ -211,6 +213,11 @@
     <Content Include="img\Afisha\20170408m.jpg" />
     <Content Include="img\Afisha\20170530.jpg" />
     <Content Include="img\Afisha\20170530_m.jpg" />
+    <Content Include="img\Afisha\20170618.jpg" />
+    <Content Include="img\Afisha\20170618m.jpg" />
+    <Content Include="img\Afisha\20170723.jpg" />
+    <Content Include="img\Afisha\20170723m.jpg" />
+    <Content Include="img\Main.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov_m.jpg" />
     <Content Include="sitemap.xml" />
@@ -246,7 +253,6 @@
     <Content Include="img\Afisha\20170519.jpg" />
     <Content Include="img\Afisha\20170519m.jpg" />
     <Content Include="img\Department.png" />
-    <Content Include="img\Main.png" />
     <Content Include="img\MoscowCameratLogo.jpg" />
     <Content Include="img\audio\entypo-25px-ffffff\PNG\arrow.png" />
     <Content Include="img\audio\entypo-25px-ffffff\PNG\cart.png" />
