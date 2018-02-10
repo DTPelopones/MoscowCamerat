@@ -1,0 +1,8 @@
+﻿@model IEnumerable<MoscowCamerat.Domain.Photo>
+
+@foreach (var photo in Model)
+{
+     <a href="@photo.path" data-size="@photo.size" data-med="@photo.path" data-med-size="@photo.size" class="col-sm-5 crop">
+        <img src="@photo.pathm" class="crop" alt="@photo.alt">
+     </a>
+}

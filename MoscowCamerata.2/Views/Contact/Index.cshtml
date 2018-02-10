@@ -1,0 +1,80 @@
+﻿<div class="noo-page-heading" style="background-image: url(../images/bg-heading-light_contact.png);">
+    <div class="container">
+        <div class="noo-page-breadcrumb">
+            <div class="breadcrumb-wrap">
+                <span>@Html.ActionLink("Главная", "Index", "Home")</span><i>&#047;</i> <span><span>Контакты</span></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-wrap">
+    <div class="default-p container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row row-fluid">
+                    <div class="nocontainer">
+                        <div class="col-sm-12">
+                            <h1 class="text-center text-uppercase">Наши контакты</h1>
+                            <p class="text-center">
+                                Отправьте нам сообщение для получения дополнительной информации о любых мероприятиях, которые вас интересуют.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-fluid">
+                    <div class="nocontainer contact-content">
+                        <div class="col-sm-6">
+                            <form class="form">
+                                @*<div class="form-control-wrap">
+                                    <select name="event" class="fs2">
+                                        <option class="item-first" value="">Selects Events
+                                        <option value="">Fiddler&#8217;s Green Amphitheatre
+                                        <option value="">Editions in the gallery cafe
+                                        <option value="">Ultra Music Festival
+                                        <option value="">The Gorge Amphitheater
+                                    </select>
+                                </div>*@
+                                <div class="form-control-wrap">
+                                    <input type="email" name="email" value="" size="40" class="form-control text email" placeholder="Email">
+                                </div>
+                                @*<div class="form-control-wrap">
+                                    <input type="text" name="subject" value="" size="40" class="form-control text" placeholder="Subject">
+                                </div>*@
+                                <div class="form-control-wrap">
+                                    <textarea name="message" cols="40" rows="10" class="form-control textarea" placeholder="Сообщение"></textarea>
+                                </div>
+                                <div class="form-control-wrap">
+                                    <input type="submit" value="ОТПРАВИТЬ" class="form-control submit">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="contact-info">
+                                <li>
+                                    <span class="contact-title">АДРЕС</span>
+                                    <i class="fa fa-map-marker"></i>
+                                    МОСКВА, ЛЕНИНГРАДСКИЙ ПР-Т, 30/2 
+                                </li>
+                                <li>
+                                    <span class="contact-title">ТЕЛЕФОН</span>
+                                    <i class="fa fa-phone"></i>
+                                    +7 (903) 626 99 36
+                                </li>
+                                <li>
+                                    <span class="contact-title">EMAIL</span>
+                                    <i class="fa fa-envelope-o"></i>
+                                    <a href="mailto:moscow.camerata@gmail.com">MOSCOW.CAMERATA@GMAIL.COM</a>
+                                </li>
+                                <li>
+                                    <span class="contact-title">ВЕБСАЙТ</span>
+                                    <i class="fa  fa-globe"></i>
+                                    <a href="#">WWW.MOSCOWCAMERATA.COM</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

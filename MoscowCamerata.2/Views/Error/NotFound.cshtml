@@ -1,0 +1,117 @@
+﻿@{
+    ViewBag.Title = "Страница не найдена - \"Московская Камерата\"";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="Московская камерата, оркестр, камерный оркестр, контакты оркестра Московская камерата " />
+    <meta name="description" content="Камерный оркестр "Московская камерата" - контакты" />
+    @Styles.Render("~/bundles/violincss")
+}
+
+@section head
+{
+
+
+    <style rel="stylesheet">
+        html,
+        body,
+        .view {
+            height: 1330px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        viewImage {
+            height: 406px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }
+
+        .view {
+            background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    @Scripts.Render("~/bundles/jqueryunobtrusiveajaxjs")
+    @Scripts.Render("~/bundles/jqueryvalidatejs")
+    @Scripts.Render("~/bundles/jqueryvalidateunobtrusivejs")
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulNotForbidden">
+            <li class="nav-item">
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 150px;">
+                    <p class="error-404">404</p>
+                    <p class="lead">Запрашиваемая страница не найдена.</p>
+                    <p>Вот некоторые полезные ссылки, которые помогут вам найти то, что вы ищете:</p>
+                </div>
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("О НАС", "Index", "Biography", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("ОРКЕСТР", "Index", "Orchestra", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("АФИША", "Index", "Afisha", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("ВИДЕО", "Index", "Video", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("ФОТО", "Index", "Mediya", new { }, new { @class = "nav-link " })
+            </li>
+            <li class="nav-item">
+
+                @Html.ActionLink("КОНТАКТЫ", "Index", "Contact", new { }, new { @class = "nav-link " })
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<footer id="events" class="page-footer center-on-small-only">
+
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left">
+
+            </section>
+
+        </div>
+    </div>
+    @Html.Partial("~/Views/Shared/FooterInfo.cshtml")
+
+</footer>

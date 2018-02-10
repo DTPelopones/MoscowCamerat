@@ -1,0 +1,606 @@
+﻿@using MoscowCamerata2.HtmlHelpers
+
+@helper IsMenuSelected(string actionName, string controllerName, string className)
+{
+    var conname = ViewContext.RouteData.Values["controller"].ToString().ToLower();
+    if (conname == controllerName.ToLower())
+    {
+        @className;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <meta name="yandex-verification" content="d769d6aeff9af201" />
+
+    @*@RenderSection("metatags", false)
+    <title>
+        @ViewBag.Title 
+    </title>
+    
+    @Styles.Render("~/bundles/violincss")
+    @Styles.Render("~/bundles/fontawesomecss") 
+
+    @Styles.Render("~/bundles/bootstrapcss")
+    @Styles.Render("~/bundles/mdbcss")
+
+    @Scripts.Render("~/bundles/jqueryjs")
+    @Scripts.Render("~/bundles/tetherjs")
+    @Scripts.Render("~/bundles/bootstrapjs")
+    @Scripts.Render("~/bundles/violinjs")
+
+    @RenderSection("head", false)
+
+    @Html.RenderStyles()
+    @Html.RenderJavaScripts()*@
+
+    <link rel="shortcut icon" href="images\favicon.png">
+    <title>Главная | Московская камерата - камерный оркестр</title>
+    <link rel='stylesheet' href='css\custom.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\bootstrap.min.css' type='text/css' media='all'>
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">*@
+    <link rel='stylesheet' href='css\settings.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\widget-calendar-full.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\style.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\commerce.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\font-awesome.min.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\jquery.mb.YTPlayer.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\owl.carousel.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\owl.theme.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\nivo-lightbox.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\nivo-default.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\mediaelementplayer.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='css\layout.css' type='text/css' media='all'>
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Dosis:100,300,400,700,900,300italic,400italic,700italic,900italic' type='text/css' media='all'>
+
+    <script type='text/javascript' src='PhotoSwipe\photoswipe.min.js'></script>
+    <script type='text/javascript' src='PhotoSwipe\photoswipe-ui-default.min.js'></script>
+    <link rel='stylesheet' href='PhotoSwipe\photoswipe.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='PhotoSwipe\default-skin\default-skin.css' type='text/css' media='all'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body class="page-menu-transparent theme-light">
+
+    <!--preloader-->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
+    <!--end preloader-->
+    <div class="site">
+        <header class="noo-header" id="noo-header">
+            <div class="navbar-wrapper">
+                <div class="navbar navbar-default navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <h1 class="sr-only">Главная</h1>
+                            <a class="navbar-toggle collapsed" data-toggle="collapse" data-target=".noo-navbar-collapse">
+                                <span class="sr-only">Навигация</span>
+                                <i class="fa fa-bars"></i>
+                            </a>
+
+                            <a href="index.htm" class="navbar-brand">
+                                <img class="noo-logo-img noo-logo-normal" src="images\logo.png" alt="">
+                                <img class="noo-logo-img noo-logo-floating" src="images\logo.png" alt="">
+                            </a>
+                        </div>
+                        <nav class="collapse navbar-collapse noo-navbar-collapse">
+                            <ul class="navbar-nav sf-menu">
+                                <li class="menu-item-has-children  @IsMenuSelected("Index", "Home", "current-menu-item")">
+                                    @*<a href="index.htm">Главная</a>*@
+                                    @Html.ActionLink("Главная", "Index", "Home")
+                                    <ul class="sub-menu">
+                                        <li><a href="index-video.htm">Home video</a></li>
+                                        <li><a href="index-parallax.htm">Home Parallax</a></li>
+                                        <li><a href="index-revolution.htm">Home Revolution</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">События</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="event.htm">Event List</a></li>
+                                        <li><a href="event-photo.htm">Event Photo</a></li>
+                                        <li><a href="event-detail.htm">Event Detail</a></li>
+                                        <li><a href="archive-event.htm">Archive Event</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Аудио</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="album.htm">Albums Masonry</a></li>
+                                        <li><a href="album-detail.htm">Single Album</a></li>
+                                    </ul>
+                                </li>
+                                <!--<li class="menu-item-has-children">
+                                    <a href="shop.htm">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="my-account.htm">My Account</a></li>
+                                        <li><a href="cart.htm">Cart</a></li>
+                                        <li><a href="cart-empty.htm">Empty Cart</a></li>
+                                        <li><a href="shop-detail.htm">Shop Detail</a></li>
+                                    </ul>
+                                </li>-->
+                                <li class="menu-item-has-children @IsMenuSelected("Index", "Orchestra", "current-menu-item")">
+                                    @Html.ActionLink("Коллектив", "Index", "Orchestra")
+                                    @*<a href="#">Коллектив</a>*@
+                                    <ul class="sub-menu">
+                                        <li><a href="event.htm">РУКОВОДСТВО</a></li>
+                                        <li><a href="event-photo.htm">ПЕРВЫЕ СКРИПКИ</a></li>
+                                        <li><a href="event-detail.htm">ВТОРЫЕ СКРИПКИ</a></li>
+                                        <li><a href="archive-event.htm">АЛЬТЫ</a></li>
+                                        <li><a href="archive-event.htm">ВИОЛОНЧЕЛИ</a></li>
+                                        <li><a href="archive-event.htm">КОНТРАБАС</a></li>
+                                    </ul>
+                                </li>
+                                <!--<li class="menu-item-has-children">
+                                    <a href="blog.htm">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-masonry.htm">Blog 2 columns</a></li>
+                                        <li><a href="blog-detail.htm">Single Post</a></li>
+                                    </ul>
+                                </li>-->
+                                <li>@Html.ActionLink("Контакты", "Index", "Contact")</li> 
+                                <!--<li class="noo-menu-item-cart minicart">
+                                    <a class="cart-button" href="cart.htm">
+                                        <span class="cart-item">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </span>
+                                    </a>
+                                -->
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        @RenderBody() 
+
+        <footer class="colophon site-info">
+            <div class="colophon wigetized">
+                <div class="background-footer"></div>
+                <div class="container">
+                    <div class="row noo-footer-main">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget widget_text">
+                                <h4 class="widget-title">О НАС</h4>
+                                <div class="textwidget">
+                                    <p>
+                                        Камерный оркестр «Московская Камерата», являющийся одним из ведущих музыкальных коллективов России, был создан в 1994 году. С момента основания оркестр возглавил выдающийся скрипач, композитор, профессор Московской консерватории, Народный артист России Игорь Фролов.
+                                    </p>
+                                    <p>
+                                        Под его управлением коллектив достиг высокого исполнительского мастерства, освоил разнообразный репертуар и получил международное признание, с большим успехом гастролируя в городах Испании, Германии, Франции и Польши.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="col-md-3 col-sm-6">
+                            <div class="widget commerce widget_top_rated_products">
+                                <h4 class="widget-title">Top Rated Products</h4>
+                                <ul class="product_list_widget">
+                                    <li>
+                                        <a href="#">
+                                            <img width="100" height="100" src="images\album\rock9.jpg" alt="rock9">
+                                            <span class="product-title">Robinson Party</span>
+                                        </a>
+                                        <div class="star-rating">
+                                            <span style="width:100%"></span>
+                                        </div>
+                                        <span class="amount">&pound;30.00</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img width="100" height="100" src="images\album\rock13.jpg" alt="rock13">
+                                            <span class="product-title">Awesome Bass</span>
+                                        </a>
+                                        <div class="star-rating">
+                                            <span style="width:80%"></span>
+                                        </div>
+                                        <span class="amount">&pound;3,999.00</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img width="100" height="100" src="images\album\rock7.jpg" alt="rock7">
+                                            <span class="product-title">My life</span>
+                                        </a>
+                                        <div class="star-rating">
+                                            <span style="width:80%"></span>
+                                        </div>
+                                        <span class="amount">&pound;55.00</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>-->
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget tribe-events-adv-list-widget">
+                                <h4 class="widget-title">Предстоящие События</h4>
+                                <div class="tribe-mini-calendar-event">
+                                    <div class="list-date">
+                                        <span class="list-dayname">Вт</span>
+                                        <span class="list-daynumber">21</span>
+                                    </div>
+                                    <div class="list-info">
+                                        <h2 class="entry-title summary">
+                                            <a href="#">День Рождения Иоганна Себастьяна Баха</a>
+                                        </h2>
+                                        <div class="duration">
+                                            <span class="date-start dtstart">Март 21-19:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tribe-mini-calendar-event">
+                                    <div class="list-date">
+                                        <span class="list-dayname">Сб</span>
+                                        <span class="list-daynumber">8</span>
+                                    </div>
+                                    <div class="list-info">
+                                        <h2 class="entry-title summary">
+                                            <a href="#">Времена года</a>
+                                        </h2>
+                                        <div class="duration">
+                                            <span class="date-start dtstart">Апрель 8-19:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tribe-mini-calendar-event">
+                                    <div class="list-date">
+                                        <span class="list-dayname">Ср</span>
+                                        <span class="list-daynumber">17</span>
+                                    </div>
+                                    <div class="list-info">
+                                        <h2 class="entry-title summary">
+                                            <a href="#">"Легенда о Валентине"</a>
+                                        </h2>
+                                        <div class="duration">
+                                            <span class="date-start dtstart">Май 17, 19-19:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tribe-mini-calendar-event">
+                                    <div class="list-date">
+                                        <span class="list-dayname">Вт</span>
+                                        <span class="list-daynumber">30</span>
+                                    </div>
+                                    <div class="list-info">
+                                        <h2 class="entry-title summary">
+                                            <a href="#">Венская классика</a>
+                                        </h2>
+                                        <div class="duration">
+                                            <span class="date-start dtstart">Май 30-19:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="widget mailchimp-widget">
+                                <h4 class="widget-title">Подписки</h4>
+                                <form class="mc-subscribe-form">
+                                    <label>Подпишитесь на наши новости.</label>
+                                    <div class="input-mail">
+                                        <input type="email" name="mc_email" class="mc-email" value="" placeholder="Введите свой email здесь...">
+                                        <i class="fa fa-envelope-o icon-mc-email"></i>
+                                    </div>
+                                    <button disabled="">Подписаться</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="noo-footer-bottom">
+                        <div class="widget widget_noo_infomation">
+                            <ul class="noo-infomation">
+                                <li>
+                                    <span class="fa fa-map-marker infomation-left"></span>
+                                    <address>Москва, Ленинградский пр-т, 30/2</address>
+                                </li>
+                                <li class="info-phone">
+                                    <span class="fa fa-phone infomation-left"></span>
+                                    <span>+7 903 626 99 36</span>
+                                </li>
+                                <li class="info-mail">
+                                    <span class="fa fa-envelope-o infomation-left"></span>
+                                    <span><a href="mailto:moscow.camerata@gmail.com">moscow.camerata@gmail.com</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="widget widget_noo_social">
+                            <div class="noo_social">
+                                <div class="social-all">
+                                    <span class="footer-social">
+                                        <span class="social-name">
+                                            Перейти н Facebook
+                                        </span>
+                                        <a href="https://www.facebook.com/moskamerata" class="fa fa-facebook"></a>
+                                    </span>
+                                    <!--<span class="footer-social">
+                                        <span class="social-name">
+                                            Follow on google-plus
+                                        </span>
+                                        <a href="#" class="fa fa-google-plus"></a>
+                                    </span>
+                                    <span class="footer-social">
+                                        <span class="social-name">
+                                            Follow on twitter
+                                        </span>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                    </span>-->
+                                    <span class="footer-social">
+                                        <span class="social-name">
+                                            Перейти на YouTube
+                                        </span>
+                                        <a href="https://www.youtube.com/channel/UC0vxUCEiVbRrmN5gPvDqVDA" class="fa fa-youtube"></a>
+                                    </span>
+                                    <!--<span class="footer-social">
+                                        <span class="social-name">
+                                            Follow on skype
+                                        </span>
+                                        <a href="#" class="fa fa-skype"></a>
+                                    </span>
+                                    <span class="footer-social">
+                                        <span class="social-name">
+                                            Follow on linkedin
+                                        </span>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </span>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="footer-player">
+        <div class="album-playlist">
+            <ul>
+                <li class="album-playlist-title">
+                    <span class="playlist-play">
+                        Играть
+                    </span>
+                    <span class="playlist-release">
+                        Произведение
+                        <small>(Наименование)</small>
+                    </span>
+                    <span class="playlist-tract">
+                        Исполнитель
+                        <small>(Автор)</small>
+                    </span>
+                    <span class="playlist-page">
+                        Страница
+                    </span>
+                    <span class="playlist-delete">
+                        Удалить
+                    </span>
+                </li>
+                <!--<li class="album-playlist-item" data-thumb="&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;images/album/rock16.jpg&quot; alt=&quot;rock16&quot; /&gt;" data-name="Morning Tea" data-artist="Maroon 5 ft Wiz Khalifa">
+                    <span class="playlist-play">
+                        <a href="http://wp.nootheme.com/wemusic/wp-content/uploads/2015/06/MorningTea.mp3">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </span>
+                    <span class="playlist-release">
+                        <a href="#">Live on Letterman</a>
+                    </span>
+                    <span class="playlist-tract">
+                        <a href="#">Morning Tea</a>
+                        <small><a href="javascript:void(0)">Maroon 5 ft Wiz Khalifa</a></small>
+                    </span>
+                    <span class="playlist-page">
+                        <a href="#"><i class="fa fa-share"></i></a>
+                    </span>
+                    <span class="playlist-delete">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                    </span>
+                </li>
+                <li class="album-playlist-item" data-thumb="&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;images/album/rock16.jpg&quot; alt=&quot;rock16&quot; /&gt;" data-name="Time Space" data-artist="Engelbert Humperdinck">
+                    <span class="playlist-play">
+                        <a href="http://wp.nootheme.com/wemusic/wp-content/uploads/2015/06/TimeSpace.mp3"><i class="fa fa-play"></i></a>
+                    </span>
+                    <span class="playlist-release">
+                        <a href="#">Live on Letterman</a>
+                    </span>
+                    <span class="playlist-tract">
+                        <a href="#">Time Space</a>
+                        <small><a href="javascript:void(0)">Engelbert Humperdinck</a></small>
+                    </span>
+                    <span class="playlist-page">
+                        <a href="#"><i class="fa fa-share"></i></a>
+                    </span>
+                    <span class="playlist-delete">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                    </span>
+                </li>
+                <li class="album-playlist-item" data-thumb="&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;images/album/rock16.jpg&quot; alt=&quot;rock16&quot; /&gt;" data-name="Interlude" data-artist="Modern Talking">
+                    <span class="playlist-play">
+                        <a href="http://wp.nootheme.com/wemusic/wp-content/uploads/2015/06/Interlude.mp3"><i class="fa fa-play"></i></a>
+                    </span>
+                    <span class="playlist-release">
+                        <a href="#">Live on Letterman</a>
+                    </span>
+                    <span class="playlist-tract">
+                        <a href="#">Interlude</a>
+                        <small><a href="javascript:void(0)">Modern Talking</a></small>
+                    </span>
+                    <span class="playlist-page">
+                        <a href="#"><i class="fa fa-share"></i></a>
+                    </span>
+                    <span class="playlist-delete">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                    </span>
+                </li>
+                <li class="album-playlist-item" data-thumb="&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;images/album/rock16.jpg&quot; alt=&quot;rock16&quot; /&gt;" data-name="Straight Ahead" data-artist="The Wanted">
+                    <span class="playlist-play">
+                        <a href="http://wp.nootheme.com/wemusic/wp-content/uploads/2015/06/StraightAhead.mp3"><i class="fa fa-play"></i></a>
+                    </span>
+                    <span class="playlist-release">
+                        <a href="#">Live on Letterman</a>
+                    </span>
+                    <span class="playlist-tract">
+                        <a href="#">Straight Ahead</a>
+                        <small><a href="javascript:void(0)">The Wanted</a></small>
+                    </span>
+                    <span class="playlist-page">
+                        <a href="#"><i class="fa fa-share"></i></a>
+                    </span>
+                    <span class="playlist-delete">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                    </span>
+                </li>
+                <li class="album-playlist-item" data-thumb="&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;images/album/rock16.jpg&quot; alt=&quot;rock16&quot; /&gt;" data-name="Morning Prayer" data-artist="Helloween">
+                    <span class="playlist-play">
+                        <a href="http://wp.nootheme.com/wemusic/wp-content/uploads/2015/06/MorningPrayer.mp3"><i class="fa fa-play"></i></a>
+                    </span>
+                    <span class="playlist-release">
+                        <a href="#">Live on Letterman</a>
+                    </span>
+                    <span class="playlist-tract">
+                        <a href="#">Morning Prayer</a>
+                        <small><a href="javascript:void(0)">Helloween</a></small>
+                    </span>
+                    <span class="playlist-page">
+                        <a href="#"><i class="fa fa-share"></i></a>
+                    </span>
+                    <span class="playlist-delete">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                    </span>
+                </li>
+                <li class="album-playlist-item" data-thumb="&lt;img width=&quot;150&quot; height=&quot;150&quot; src=&quot;images/album/rock16.jpg&quot; alt=&quot;rock16&quot; /&gt;" data-name="Coming Down" data-artist="Shane Filan">
+                    <span class="playlist-play">
+                        <a href="http://wp.nootheme.com/wemusic/wp-content/uploads/2015/06/CominDown.mp3"><i class="fa fa-play"></i></a>
+                    </span>
+                    <span class="playlist-release">
+                        <a href="#">Live on Letterman</a>
+                    </span>
+                    <span class="playlist-tract">
+                        <a href="#">Coming Down</a>
+                        <small><a href="javascript:void(0)">Shane Filan</a></small>
+                    </span>
+                    <span class="playlist-page">
+                        <a href="#"><i class="fa fa-share"></i></a>
+                    </span>
+                    <span class="playlist-delete">
+                        <a href="#"><i class="fa fa-times"></i></a>
+                    </span>
+                </li>-->
+            </ul>
+        </div>
+
+        <div class="album-player">
+            <div class="album-player-embed">
+                <span class="contro-album-player contro-down-player"><i class="fa fa-angle-down"></i></span>
+                <span class="contro-album-player contro-up-player"><i class="fa fa-angle-up"></i></span>
+                <audio class="album-audio-embed">
+                    <source src="#" type="audio/mpeg"></source>
+                </audio>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container" style="transform: translate3d(0px, 0px, 0px);">
+                <div class="pswp__item" style="display: block; transform: translate3d(-420px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(0px, 190px, 0px) scale(1);"></div></div>
+                <div class="pswp__item" style="transform: translate3d(0px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(242px, 118px, 0px) scale(0.253333);"></div></div>
+                <div class="pswp__item" style="display: block; transform: translate3d(420px, 0px, 0px);"><div class="pswp__zoom-wrap" style="transform: translate3d(0px, 190px, 0px) scale(1);"></div></div>
+            </div>
+            <div class="pswp__ui pswp__ui--fit pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Предыдущая (стрелка влево)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Следующая (стрелка вправо)"></button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    @*@Scripts.Render("~/bundles/mdbminjs")*@
+
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+    <script type='text/javascript' src='js\jquery-migrate.min.js'></script>
+    <script type='text/javascript' src='js\jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript' src='js\jquery.themepunch.revolution.min.js'></script>
+    <script type='text/javascript' src='js\modernizr-2.7.1.min.js'></script>
+    <script type='text/javascript' src='js\imagesloaded.pkgd.min.js'></script>
+    <script type='text/javascript' src='js\jquery.carouFredSel-6.2.1.js'></script>
+    <script type='text/javascript' src='js\jquery.touchSwipe.min.js'></script>
+    <script type='text/javascript' src='js\bootstrap.min.js'></script>
+    <script type='text/javascript' src='js\hoverIntent-r7.min.js'></script>
+    <script type='text/javascript' src='js\superfish-1.7.4.min.js'></script>
+    <script type='text/javascript' src='js\main.js'></script>
+    <script type='text/javascript' src='js\mediaelement-and-player.js'></script>
+    <script type='text/javascript' src='js\player.js'></script>
+    <script type='text/javascript' src='js\jquery.plugin.min.js'></script>
+    <script type='text/javascript' src='js\jquery.countdown.min.js'></script>
+    <script type='text/javascript' src='js\jquery.parallax.js'></script>
+    <script type='text/javascript' src='js\owl.carousel.min.js'></script>
+
+    <script type="text/javascript">
+        var $height_w = jQuery(window).height();
+        jQuery('.noo-countdown').css('height', $height_w + 'px');
+        jQuery(window).resize(function () {
+            var $height_w = jQuery(window).height();
+            jQuery('.noo-countdown').css('height', $height_w + 'px');
+        });
+        jQuery(function () {
+            jQuery('.full-background li:first-child').show();
+            var myVar = '';
+            clearInterval(myVar);
+            myVar = setInterval(function () {
+                jQuery('.full-background li:first-child').fadeOut(1200).next('li').fadeIn(1200).end().appendTo('.full-background');
+            }, 3500);
+
+
+            austDay = new Date(2016, 5 - 1, 31);
+            jQuery('#defaultCountdown').countdown({ until: austDay });
+            jQuery('#year').text(austDay.getFullYear());
+        });
+
+    </script>
+
+    <script type='text/javascript' src='js\photoswipe.js'></script>
+
+    <!-- Yandex.Metrika counter -->
+    @*<script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43073964 = new Ya.Metrika({ id:43073964, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43073964" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->*@
+</body>
+</html>
+

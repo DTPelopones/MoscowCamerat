@@ -1,0 +1,11 @@
+﻿@using MoscowCamerata2.HtmlHelpers
+
+@{
+    Html.AddStyle("/bundles/videocss");
+    Html.AddStyle("/bundles/material-iconscss");
+    Html.AddJavaScript("/bundles/videojs");
+}
+
+<div id="video_player"></div>
+
+@Scripts.Render("~/bundles/medijs") 

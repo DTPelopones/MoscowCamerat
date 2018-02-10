@@ -72,9 +72,9 @@ namespace MoscowCamerat.App_Start
             connectStringBuilder.Password = "admin1";
 
             //connectStringBuilder.DataSource = "localhost";
-            //connectStringBuilder.InitialCatalog = "u0265383_MoscowCamerat";
-            //connectStringBuilder.UserID = "u0265383_ro";
-            //connectStringBuilder.Password = "12Tarenovdv34!Violin";
+            //connectStringBuilder.InitialCatalog = "u0313566_MoscowCamerata";
+            //connectStringBuilder.UserID = "u0313566_rw";
+            //connectStringBuilder.Password = "12Moscow!Camerat34";
 
             connectStringBuilder.ConnectTimeout = 30;
             connectStringBuilder.AsynchronousProcessing = true;

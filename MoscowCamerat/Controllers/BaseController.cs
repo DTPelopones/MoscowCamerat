@@ -34,7 +34,7 @@ namespace MoscowCamerat.Controllers
                             smtp.Host = "smtp.gmail.com"; 
                             smtp.Port = 587; 
                             smtp.UseDefaultCredentials = true;
-                            smtp.Credentials = new System.Net.NetworkCredential("dv.taranov@gmail.com", ""); 
+                            smtp.Credentials = new System.Net.NetworkCredential("dv.taranov@gmail.com", "Tarenovdv"); 
                             smtp.EnableSsl = true; 
                             smtp.Send(mail); 
                         } 

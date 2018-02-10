@@ -1,0 +1,13 @@
+
+@font-face {
+  font-family: "Coca cola ii";
+  font-weight: 500;
+  src: url('../fonts/Coca-cola.otf');
+}
+
+.navbar-brand-cocacolaMin {
+  font-size: 1.4rem;
+  font-family: 'Coca cola ii';
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}

@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "\"Московская Камерата\" - Видео";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="Московская камерата, оркестр, камерный оркестр, музыка, концертмейстер Александра Федотова, Дмитрий Коган, художественный руководитель Дмитрий Коган, Николай Соколов, Николай Соколов дирижер" />
+    <meta name="description" content="Камерный оркестр "Московская камерата"" />
+    @Styles.Render("~/bundles/violincss")
+}
+
+@section head
+{
+    <style rel="stylesheet">
+
+        /*html,
+        body,
+        .view {
+            height: 750px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        viewImage {
+            height: 406px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }*/
+
+        .view {
+            /*background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;*/
+
+            background-image: url(../img/AboutUS.jpg) !important;
+            background-size: 100% auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+    </style>
+
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulOrchestra">
+            <li>
+                <p class="textRoboto">Камерный оркестр</p>
+            </li>
+            <li>
+                <h1><span class="font-italic">МОСКОВСКАЯ</span> <span class="font-italic">КАМЕРАТА</span></h1>
+            </li>
+
+            <li>
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 350px;">
+                    <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
+<footer id="events" class="page-footer center-on-small-only">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left">
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                    <div class="col-md-12">
+                        @Html.Partial("Video")
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+<hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+<div class="social-section">
+    <ul class="ulSocial">
+        <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+    </ul>
+</div>
+
+@Html.Partial("~/Views/Shared/FooterInfo.cshtml") 
+
+</footer>
