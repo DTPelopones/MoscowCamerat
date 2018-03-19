@@ -22,6 +22,7 @@
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -231,7 +232,13 @@
     <Content Include="img\Afisha\20180118m.jpg" />
     <Content Include="img\Afisha\20180131.jpg" />
     <Content Include="img\Afisha\20180131m.jpg" />
+    <Content Include="img\Afisha\20180223.jpg" />
+    <Content Include="img\Afisha\20180223m.jpg" />
+    <Content Include="img\Afisha\20180304.jpg" />
+    <Content Include="img\Afisha\20180304m.jpg" />
     <Content Include="img\Main.jpg" />
+    <Content Include="img\Orchestra\Cello\ErmakovAleksandr.jpg" />
+    <Content Include="img\Orchestra\Cello\ErmakovAleksandr_m.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov_m.jpg" />
     <Content Include="sitemap.xml" />
@@ -329,8 +336,6 @@
     <Content Include="img\Orchestra\ArtDirector\Kogan_m.jpg" />
     <Content Include="img\Orchestra\Basso\RumyancevAvatar.jpg" />
     <Content Include="img\Orchestra\Basso\RumyancevAvatar_m.jpg" />
-    <Content Include="img\Orchestra\Cello\MorchenkoAvatar.jpg" />
-    <Content Include="img\Orchestra\Cello\MorchenkoAvatar_m.jpg" />
     <Content Include="img\Orchestra\Cello\VolkovaAvatar.jpg" />
     <Content Include="img\Orchestra\Cello\VolkovaAvatar_m.jpg" />
     <Content Include="img\Orchestra\Kapellmeister\NikolayPetrovich.jpg" />

@@ -214,3 +214,6 @@ ModelManifest.xml
 MoscowCamerat/App_Start/NinjectWebCommon.cs
 MoscowCamerat/Properties/PublishProfiles/PRODUCTION.pubxml
 MoscowCamerat/Controllers/BaseController.cs
+MoscowCamerata.2/App_Start/NinjectWebCommon.cs
+MoscowCamerata.2/Properties/PublishProfiles/PRODUCTION.pubxml
+MoscowCamerata.2/Controllers/BaseController.cs

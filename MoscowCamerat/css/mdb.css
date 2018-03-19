@@ -6750,7 +6750,7 @@ blockquote p {
 .testimonial-carousel .testimonial .avatar {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     height: 100%;
 }
 
@@ -17567,9 +17567,10 @@ button.picker__today:focus {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2)
-  and (orientation: portrait) { 
-            .view { 
-        height: 13rem; 
+  and (orientation: portrait) {
+    .view {
+        height: 13rem;
+        
     } 
     h1, .h1 {
     font-size: 1.9rem;
@@ -17589,6 +17590,9 @@ button.picker__today:focus {
     font-size: 2.5rem;
     font-weight: bold; 
 }
+    .flex-center {
+        align-items: center;
+    }
 }
 
 /* ----------- iPhone 6+ ----------- */
@@ -17641,7 +17645,7 @@ button.picker__today:focus {
     }
 
     .ulOrchestra {
-        margin-top: 0;
+        margin-top: 90px;
         margin-bottom: -26rem;
     }
 
@@ -17684,7 +17688,8 @@ and (max-device-width : 1366px) {
   and (orientation: landscape)  {
 
     .ulOrchestra {
-    margin-bottom: -24rem;
+        margin-top: 150px;
+        margin-bottom: -24rem;
     }
 
     .view {
@@ -17718,7 +17723,11 @@ and (max-device-width : 1366px) {
                   a.crop {
     margin: 5px 7px;
 
-} 
+}
+    .section {
+        /* margin-bottom: 2rem; */
+        margin-bottom: 15rem;
+    }
 }
 
 
@@ -18283,3 +18292,5 @@ body {
         font-weight: bold;
     }
 }
+
+
