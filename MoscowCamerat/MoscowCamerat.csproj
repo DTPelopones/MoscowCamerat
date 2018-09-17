@@ -186,6 +186,7 @@
     <Compile Include="Controllers\MediyaController.cs" />
     <Compile Include="Controllers\AfishaController.cs" />
     <Compile Include="Controllers\OrchestraController.cs" />
+    <Compile Include="Controllers\SoloistsController.cs" />
     <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -240,11 +241,29 @@
     <Content Include="img\Afisha\20180412m.jpg" />
     <Content Include="img\Afisha\20180426.jpg" />
     <Content Include="img\Afisha\20180426m.jpg" />
+    <Content Include="img\Afisha\20180605.jpg" />
+    <Content Include="img\Afisha\20180605m.jpg" />
+    <Content Include="img\Afisha\20180610.jpg" />
+    <Content Include="img\Afisha\20180610m.jpg" />
+    <Content Include="img\Afisha\20180701.jpg" />
+    <Content Include="img\Afisha\20180701m.jpg" />
+    <Content Include="img\Afisha\20180805.jpg" />
+    <Content Include="img\Afisha\20180805m.jpg" />
+    <Content Include="img\Afisha\20180806.jpg" />
+    <Content Include="img\Afisha\20180806m.jpg" />
+    <Content Include="img\Afisha\20180930.jpg" />
+    <Content Include="img\Afisha\20180930m.jpg" />
     <Content Include="img\Main.jpg" />
+    <Content Include="img\Orchestra\1-e\AnnaGubert.jpg" />
+    <Content Include="img\Orchestra\1-e\AnnaGubert_m.jpg" />
+    <Content Include="img\Orchestra\2-e\SabanovaAvatar.jpg" />
+    <Content Include="img\Orchestra\2-e\SabanovaAvatar_m.jpg" />
     <Content Include="img\Orchestra\Cello\ErmakovAleksandr.jpg" />
     <Content Include="img\Orchestra\Cello\ErmakovAleksandr_m.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov_m.jpg" />
+    <Content Include="img\Soloists_1.jpg" />
+    <Content Include="img\Soloists_2.jpg" />
     <Content Include="sitemap.xml" />
     <Content Include="App_Data\SQL\CreateLogin.sql" />
     <Content Include="App_Data\SQL\fn_login.sql" />
@@ -314,8 +333,6 @@
     <Content Include="img\Orchestra\1-e\GoryachevaAvatar_m.jpg" />
     <Content Include="img\Orchestra\1-e\GrigoryanAvatar.jpg" />
     <Content Include="img\Orchestra\1-e\GrigoryanAvatar_m.jpg" />
-    <Content Include="img\Orchestra\1-e\SabanovaAvatar.jpg" />
-    <Content Include="img\Orchestra\1-e\SabanovaAvatar_m.jpg" />
     <Content Include="img\Orchestra\1-e\VladimirBugrovAvatar.jpg" />
     <Content Include="img\Orchestra\1-e\VladimirBugrovAvatar_m.jpg" />
     <Content Include="img\Orchestra\2-e\MinaevaAvatar.jpg" />
@@ -541,6 +558,7 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Properties\PublishProfiles\PRODUCTION.pubxml" />
     <Content Include="Views\Shared\FooterInfo.cshtml" />
+    <Content Include="Views\Soloists\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

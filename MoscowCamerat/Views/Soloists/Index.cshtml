@@ -1,0 +1,184 @@
+﻿
+@{
+    ViewBag.Title = "Оркестр \"Московская Камерата\" - Солисты";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="Московская камерата, оркестр, камерный оркестр, основатель Игорь Фролов, музыка, концертмейстер Александра Федотова, Дмитрий Коган, художественный руководитель Дмитрий Коган, Николай Соколов, Николай Соколов дирижер, Александра Федотова" />
+    <meta name="description" content="«Московская Камерата», являющийся одним из ведущих музыкальных коллективов России, был создан в 1994 году. С момента основания оркестр возглавил выдающийся скрипач, композитор, профессор Московской консерватории, Народный артист России Игорь Фролов." />
+    @Styles.Render("~/bundles/violincss")
+}
+
+@section head
+{
+    <style rel="stylesheet">
+
+        /*html,
+        body,
+        .view {
+            height: 750px;
+            background-color: rgb(76, 76, 170);
+        }
+
+        viewImage {
+            height: 406px;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: -1px;
+        }
+
+        .flex-center {
+            color: #fff;
+        }*/
+
+        .view {
+            /*background: url("../../img/AboutUS.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;*/
+
+            background-image: url(../img/AboutUS.jpg) !important;
+            background-size: 100% auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+        }
+    </style>
+}
+
+<div class="view hm-black-strong">
+    <div class="full-bg-img flex-center">
+        <ul class="animated fadeInUp ulOrchestra">
+            <li>
+                <p class="textRoboto">Ансамбль солистов оркестра</p>
+            </li>
+            <li>
+                <h1><span class="font-italic">МОСКОВСКАЯ</span> <span class="font-italic">КАМЕРАТА</span></h1>
+            </li>
+
+            <li>
+                <div id="aEvents" class="container-fluid text-xs-center" style="height: 250px;">
+                    <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                </div>
+            </li>
+        </ul>
+        
+    </div>
+</div>
+
+<footer id="events" class="page-footer center-on-small-only">
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left">
+
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+
+                    <div class="col-md-12">
+
+
+                        <div class="fontAbout">
+
+                            <p>
+                                Ансамбль солистов оркестра <strong>«Московская Камерата»</strong> -
+                                образовался в 2014 году, благодаря стремлению музыкантов к новым формам творчества.
+                            </p>
+                            <p>
+                                Солисты оркестра <strong>«Московская камерата»</strong> являются лауреатами международных
+                                конкурсов и постоянными участниками крупных фестивалей в <strong>России и за рубежом</strong>.
+                            </p>
+                            <p>
+                                Имея богатый исполнительский опыт и активно реализуя собственные сольные проекты,
+                                каждый исполнитель привносит уникальный оттенок в слаженное звучание музыкальной палитры.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12 ">
+                        <div class="view overlay hm-white-slight card">
+                            <img src="/img/Soloists_1.jpg" alt="Фото - Солисты оркестра Московская камерата - Общий план">
+                            <a>
+                                <div class="mask waves-effect waves-light"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+
+                    @*<div class="col-md-12 ">
+                <div class="view overlay hm-white-slight card">
+                    <img src="/img/Soloists_2.jpg" alt="Фото - Солисты оркестра Московская камерата">
+                    <a>
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                </div>
+            </div>*@
+
+                    <div class="col-md-12 ">
+
+                        <div class="fontAbout">
+                            <p>
+                                Репертуар ансамбля охватывает музыку различных стилей и жанров от эпохи барокко до
+                                современных авторов. В концертных программах звучат инструментальные сочинения
+                                <strong>
+                                    А.Вивальди, И.С.Баха, В.А.Моцарта, П.Чайковского, И.Фролова, А.Пьяццоллы
+                                </strong> и других
+                                популярных композиторов. Искушенные ценители классической музыки могут услышать
+                                редко исполняемые произведения старинных композиторов, а любителям популярных и
+                                современных мелодий предназначены самые смелые исполнительские эксперименты и
+                                аранжировки, созданные специально для данного коллектива.
+                            </p>
+                            <p>
+                                Большое внимание участники ансамбля уделяют привлечению в концертные залы новых
+                                слушателей. Специальные программы для самых маленьких адресованы тем, кто только
+                                начинает приобщаться к искусству.
+                            </p>
+                            <p>
+                                Ансамбль солистов оркестра <strong>«Московская камерата»</strong> с успехом выступает на лучших
+                                концертных площадках, а также регулярно участвует в официальных мероприятиях,
+                                проводимых <strong>Департаментом культуры и Правительством Москвы</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-12" style="text-align: center;">
+                    <div class="card card-cascade wider">
+                        <iframe width="100%" height="200%" src="https://www.youtube.com/embed/DprlMA-7am0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+    <div class="social-section">
+        <ul class="ulSocial">
+            <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+        </ul>
+    </div>
+
+    @Html.Partial("~/Views/Shared/FooterInfo.cshtml") 
+
+</footer>
