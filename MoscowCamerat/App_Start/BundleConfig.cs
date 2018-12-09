@@ -11,9 +11,12 @@ namespace MoscowCamerat
         {
             BundleTable.Bundles.UseCdn = true;
 
-            bundles.Add(new LicensedScriptBundle("~/bundles/jqueryjs", "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+            bundles.Add(new LicensedScriptBundle("~/bundles/jqueryjs", "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+                            //"https://code.jquery.com/jquery-1.10.0.min.js" 
+                            )
                         .Include(
                         "~/js/jquery-3.1.1.min.js"
+                        //"~/js/jquery-1.10.0.min.js"
                         ));
 
             bundles.Add(new LicensedScriptBundle("~/bundles/ajaxjs"/*, "http://ajax.aspnetcdn.com/ajax/mvc/3.0/jquery.unobtrusive-ajax.min.js"*/).Include(
@@ -34,9 +37,14 @@ namespace MoscowCamerat
             ));
 
 
-            bundles.Add(new LicensedScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js")
+            bundles.Add(
+                        //new LicensedScriptBundle("~/bundles/bootstrapjs", "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js") 
+                        new LicensedScriptBundle("~/bundles/bootstrapjs") 
                         .Include(
-                        "~/js/bootstrap.min.js"
+                            "~/js/moment.min.js",
+                            "~/js/bootstrap.min.js"
+                            ,"~/js/bootstrap-datetimepicker.min.js"
+                            ,"~/js/bootstrap-datetimepicker.ru.js"
                         )
                         );
 
@@ -88,7 +96,8 @@ namespace MoscowCamerat
             bundles.Add(new LicensedStyleBundle("~/bundles/css").IncludeWithCssRewriteUrlTransform(
                       "~/css/bootstrap.css",
                       "~/css/modern-business.css", 
-                      "~/css/bootstrap-social.css"
+                      "~/css/bootstrap-social.css",
+                      "~/css/bootstrap-datetimepicker.min.css" 
                       ));
 
             bundles.Add(new LicensedStyleBundle("~/bundles/bootstrapcss").IncludeWithCssRewriteUrlTransform(

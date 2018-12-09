@@ -32,6 +32,11 @@ namespace MoscowCamerat.Domain
         {
             return Db.ExecuteQuery<Account>(sql, email, password).ToList();
         }
+
+        public virtual int SqlQueryGetInt(string sql)
+        {
+            return Db.ExecuteQuery<int>(sql).ToList().First();
+        }
     }
 
 }

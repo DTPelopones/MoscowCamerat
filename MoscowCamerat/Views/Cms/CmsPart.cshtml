@@ -1,0 +1,6 @@
+﻿@model IEnumerable<MoscowCamerat.Domain.Photo>
+
+@foreach (MoscowCamerat.Domain.Photo photo in Model)
+{
+    <div class="date fontAbout"><b style="color: red">@photo.sort</b> - @photo.eventDay<span>@photo.eventMonthYear</span> - @photo.eventTime - "@photo.eventDesc"</div>
+}

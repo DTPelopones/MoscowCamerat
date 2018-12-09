@@ -1,0 +1,162 @@
+﻿@model MoscowCamerat.Domain.Photo
+
+@{
+                /**/
+
+                ViewBag.Title = "Контакты - \"Московская Камерата\"";
+}
+
+@section metatags
+{
+    <meta name="keywords" content="CMS, Московская камерата, оркестр, камерный оркестр, контакты оркестра Московская камерата " />
+    <meta name="description" content="Камерный оркестр " Московская камерата" - CMS" />
+    @Styles.Render("~/bundles/violincss")
+    @Styles.Render("~/bundles/css")
+}
+
+@section head
+{
+    <style rel="stylesheet">
+            .view {
+                background-image: url(../img/AboutUS.jpg) !important;
+                background-size: 100% auto;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+            }
+        </style>
+
+        @*@Scripts.Render("~/bundles/bootstrapjs")*@
+
+
+        @*@Scripts.Render("~/bundles/jqueryunobtrusiveajaxjs")
+
+        @Scripts.Render("~/bundles/jqueryvalidatejs")
+
+        @Scripts.Render("~/bundles/jqueryvalidateunobtrusivejs")*@
+
+}<div class="view hm-black-strong">
+        <div class="full-bg-img flex-center">
+            <ul class="animated fadeInUp ulOrchestra">
+                <li>
+                    <div id="aEvents" class="container-fluid text-xs-center" style="height: 0px;">
+                        <a class="btn-floating btn-action blue darken-4 waves-effect waves-light navbar-brand-cocacolaMin contactsMK" href="#events">MK<i class="fa fa-chevron-down fa-1 navbar-brand-cocacolaMinChevronDown"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<footer id="events" class="page-footer center-on-small-only">
+    <div class="main-wrapper">
+        <div class="container-fluid center-section">
+            <section class="section extra-margins text-xs-left">
+
+
+                <h4 class="section-heading textRoboto"><span class="font-italic">CMS</span></h4>
+                <h3 class="fontAbout">Выберите Афишу для загрузки в формате.jpg</h3>
+                @{ Html.RenderAction("CmsPart", "Cms"); }
+                <br>
+
+                @using (Html.BeginForm("Upload", "Cms", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+            <div class="panel-body fontAbout ">
+                @Html.HiddenFor(m => m.ID)
+                @foreach (var property in ViewData.ModelMetadata.Properties)
+                {
+                    switch (property.PropertyName)
+                    {
+                        case "eventDesc":
+                        case "sort":
+                <div class="form-group fontAbout">
+                    <label>@(property.DisplayName ?? property.PropertyName)</label>
+                    @if (property.PropertyName == "Description")
+                    {
+            @Html.TextArea(property.PropertyName, null, new { @class = "form-control", rows = 1 })
+}
+else
+{
+            @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+}
+                    @*@Html.ValidationMessage(property.PropertyName)*@
+                </div>
+                            break;
+
+                        case "dateConcert":
+
+            <div class="form-group fontAbout">
+                <label>@(property.DisplayName ?? property.PropertyName)</label>
+                <div class='input-group date' id='datetimepicker2'>
+                    @*@Html.TextBox(property.PropertyName, null, new { @class = "form-control" })*@
+                    @*@{*@
+                    @*@{
+                        DateTime dt = DateTime.Now;
+
+                        if (Model != null)
+                        {
+                            dt = (System.DateTime)Model.dateConcert;
+                        }
+                    }*@
+
+
+                    @Html.TextBoxFor(model => model.dateConcert, new { @class = "form-control" })
+                    @*//;*@
+                    @*  }*@
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                @Html.ValidationMessage(property.PropertyName)
+            </div>
+
+break;
+
+default:
+break;
+}
+}
+            </div>
+
+            <div style="position:relative;">
+                <label id="upload-file-info" class="fontAbout">Афиша</label>
+                <a class='btn btn-primary' href='javascript:;'>
+                    Выберите файл...
+                    <input type="file" name="upload" size="40"
+                           style="position:absolute;z-index:2;top:0;
+                                            left:0; filter: alpha(opacity= 0); opacity:0;
+                                            background-color:transparent;color:transparent;"
+                           onchange='$("#upload-file-info").html($(this).val());' />
+                </a>
+
+            </div>
+            <br>
+
+            <input id="submit" type="submit" class="btn btn-default waves-effect waves-light" value="ЗАГРУЗИТЬ" />
+            @*<button id="submit" type="submit" class="btn btn-default waves-effect waves-light">Загрузить</button>*@
+}
+            </section>
+        </div>
+    </div>
+
+<hr class="wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+    <div class="social-section">
+        <ul class="ulSocial">
+            <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+        </ul>
+    </div>
+
+@Html.Partial("~/Views/Shared/FooterInfo.cshtml")
+
+</footer>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datetimepicker2').datetimepicker({
+                //isRTL: false
+                format: 'DD.MM.YYYY HH:mm',
+                //autoclose: true
+                //language: 'ru'
+                locale: 'ru' 
+            });
+        });
+    </script>

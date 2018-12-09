@@ -72,7 +72,6 @@
       <Column Name="path" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
       <Column Name="type" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="movieTime" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
-      <Column Name="inputDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="album" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="pathm" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
@@ -84,6 +83,7 @@
       <Column Name="eventMonthYear" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="eventDesc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
       <Column Name="eventTime" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="dateConcert" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

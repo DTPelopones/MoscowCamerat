@@ -20,4 +20,30 @@ namespace MoscowCamerat.Domain
                             ErrorMessage = "Не корректный E-Mail.")]
         public string email { get; set; }
     }
+
+    [MetadataType(typeof(PhotoMetaData))]
+    public partial class Photo
+    {
+    }
+
+    public partial class PhotoMetaData
+    {
+        [DisplayName("Название")]
+        public string eventDesc { get; set; }
+
+        [DisplayName("День")]
+        public string eventDay { get; set; }
+
+        [DisplayName(".Месяц.Год - пример: .01.2020")]
+        public string eventMonthYear { get; set; }
+
+        [DisplayName("Время")]
+        public string eventTime { get; set; }
+
+        [DisplayName("Время")]
+        public DateTime dateConcert { get; set; }
+
+        [DisplayName("Сортировка")]
+        public int sort { get; set; }
+    }
 }
