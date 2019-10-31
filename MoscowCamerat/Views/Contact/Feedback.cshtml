@@ -38,15 +38,16 @@
     </div>
     <div class="text-xs-center">
         <button id="submit" type="submit" class="btn btn-default">Отправить</button>
+        <button id="buytickets" class="btn btn-primary" onClick="window.open('https://ponominalu.ru/event/moskovskaya-kamerata?utm_source=kamerata&utm_medium=outreach&utm_campaign=offsite');">Билеты<p style="font-size: 7px">промокод: CAMERATA</p></button>
         <span id="sendingProgress" style="display: none;">
             отправка сообщения...
             <img src="@Href("~/img/AjaxLoader.gif")" alt="Ожидание" />
         </span>
-        <span id="emailMessage" style="display: none;" ></span>
+        <span id="emailMessage" style="display: none;"></span>
 
         <div class="call">
             <br>
-            <span><i class="fa fa-phone"> </i></span> +7 903 626 99 36 
+            <span><i class="fa fa-phone"> </i></span> +7 903 626 99 36
         </div>
     </div>
 }
@@ -57,7 +58,7 @@
         var name = $('#FromName').val();
         var email = $('#FromEmail').val();
         var body = $('#Body').val();
-        var isEmailError = $('#FromEmailDanger').hasClass('field-validation-error'); 
+        var isEmailError = $('#FromEmailDanger').hasClass('field-validation-error');
 
         if (name.length != 0 && email.length != 0 && body.length != 0 && !isEmailError) {
             $('#submit').removeAttr('disabled');
@@ -82,11 +83,13 @@
     function MailError() {
         sendMessage();
     }
-    function sendMessage(){
-        setTimeout(function () { $('#emailMessage').css('display', 'block'); }, 100); 
-        setTimeout(function () { $('#emailMessage').css('display', 'none'); }, 5000); 
+    function sendMessage() {
+        setTimeout(function () { $('#emailMessage').css('display', 'block'); }, 100);
+        setTimeout(function () { $('#emailMessage').css('display', 'none'); }, 5000);
     }
     window.onload = function () {
         checkFormsInput();
     }
+
+ 
 </script>

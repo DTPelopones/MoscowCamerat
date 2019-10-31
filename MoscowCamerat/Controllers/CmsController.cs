@@ -205,12 +205,13 @@ namespace MoscowCamerat.Controllers
         [HttpPost]
         public ActionResult Upload(Photo photo, HttpPostedFileBase upload)
         {
+
             if (upload != null)
             {
                 // получаем имя файла
                 string fileName = System.IO.Path.GetFileName(upload.FileName);
 
-                if (fileName.Contains(".jpg") || fileName.Contains(".jpeg"))
+                if (fileName.Contains(".jpg") || fileName.Contains(".jpeg") || fileName.Contains(".JPG") || fileName.Contains(".JPEG"))
                 {
                     photo.album = "Афиша"; 
                     photo.alt = photo.album + " - " + photo.eventDesc;
@@ -223,7 +224,7 @@ namespace MoscowCamerat.Controllers
                         photo.sort = repository.SqlQueryGetInt("select max(p.[sort]) as [sort] from dbo.Photo as p with(nolock) where p.[album] = N'Афиша'") + 3;
                     }
                     string newFileName = photo.dateConcert.ToString("yyyy") + photo.dateConcert.ToString("MM") + photo.dateConcert.ToString("dd") + ".jpg"; 
-                    fileName = fileName.Replace(".jpeg", ".jpg");
+                    fileName = fileName.Replace(".jpeg", ".jpg").Replace(".JPEG", ".jpg").Replace(".JPG", ".jpg");
 
                     // сохраняем файл в папку Files в проекте
                     upload.SaveAs(Server.MapPath("~/img/Afisha/" + newFileName));

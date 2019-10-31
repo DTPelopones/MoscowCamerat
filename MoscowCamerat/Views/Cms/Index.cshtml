@@ -59,81 +59,81 @@
                 <br>
 
                 @using (Html.BeginForm("Upload", "Cms", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-            <div class="panel-body fontAbout ">
-                @Html.HiddenFor(m => m.ID)
-                @foreach (var property in ViewData.ModelMetadata.Properties)
                 {
-                    switch (property.PropertyName)
-                    {
-                        case "eventDesc":
-                        case "sort":
-                <div class="form-group fontAbout">
-                    <label>@(property.DisplayName ?? property.PropertyName)</label>
-                    @if (property.PropertyName == "Description")
-                    {
-            @Html.TextArea(property.PropertyName, null, new { @class = "form-control", rows = 1 })
-}
-else
-{
-            @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
-}
-                    @*@Html.ValidationMessage(property.PropertyName)*@
-                </div>
-                            break;
-
-                        case "dateConcert":
-
-            <div class="form-group fontAbout">
-                <label>@(property.DisplayName ?? property.PropertyName)</label>
-                <div class='input-group date' id='datetimepicker2'>
-                    @*@Html.TextBox(property.PropertyName, null, new { @class = "form-control" })*@
-                    @*@{*@
-                    @*@{
-                        DateTime dt = DateTime.Now;
-
-                        if (Model != null)
+                    <div class="panel-body fontAbout ">
+                        @Html.HiddenFor(m => m.ID)
+                        @foreach (var property in ViewData.ModelMetadata.Properties)
                         {
-                            dt = (System.DateTime)Model.dateConcert;
+                            switch (property.PropertyName)
+                            {
+                                case "eventDesc":
+                                case "sort":
+                                    <div class="form-group fontAbout">
+                                        <label>@(property.DisplayName ?? property.PropertyName)</label>
+                                        @if (property.PropertyName == "Description")
+                                        {
+                                            @Html.TextArea(property.PropertyName, null, new { @class = "form-control", rows = 1 })
+                                        }
+                                        else
+                                        {
+                                            @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+                                        }
+                                        @*@Html.ValidationMessage(property.PropertyName)*@
+                                    </div>
+                                    break;
+
+                                case "dateConcert":
+
+                                    <div class="form-group fontAbout">
+                                        <label>@(property.DisplayName ?? property.PropertyName)</label>
+                                        <div class='input-group date' id='datetimepicker2'>
+                                            @*@Html.TextBox(property.PropertyName, null, new { @class = "form-control" })*@
+                                            @*@{*@
+                                            @*@{
+                                        DateTime dt = DateTime.Now;
+
+                                        if (Model != null)
+                                        {
+                                            dt = (System.DateTime)Model.dateConcert;
+                                        }
+                                    }*@
+
+
+                                            @Html.TextBoxFor(model => model.dateConcert, new { @class = "form-control" })
+                                            @*//;*@
+                                            @*  }*@
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                        @Html.ValidationMessage(property.PropertyName)
+                                    </div>
+
+                                    break;
+
+                                default:
+                                    break;
+                            }
                         }
-                    }*@
+                    </div>
 
-
-                    @Html.TextBoxFor(model => model.dateConcert, new { @class = "form-control" })
-                    @*//;*@
-                    @*  }*@
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-                @Html.ValidationMessage(property.PropertyName)
-            </div>
-
-break;
-
-default:
-break;
-}
-}
-            </div>
-
-            <div style="position:relative;">
-                <label id="upload-file-info" class="fontAbout">Афиша</label>
-                <a class='btn btn-primary' href='javascript:;'>
-                    Выберите файл...
-                    <input type="file" name="upload" size="40"
-                           style="position:absolute;z-index:2;top:0;
+                    <div style="position:relative;">
+                        <label id="upload-file-info" class="fontAbout">Афиша</label>
+                        <a class='btn btn-primary' href='javascript:;'>
+                            Выберите файл...
+                            <input type="file" name="Upload" size="40"
+                                   style="position:absolute;z-index:2;top:0;
                                             left:0; filter: alpha(opacity= 0); opacity:0;
                                             background-color:transparent;color:transparent;"
-                           onchange='$("#upload-file-info").html($(this).val());' />
-                </a>
+                                   onchange='$("#upload-file-info").html($(this).val());' />
+                        </a>
 
-            </div>
-            <br>
+                    </div>
+                    <br>
 
-            <input id="submit" type="submit" class="btn btn-default waves-effect waves-light" value="ЗАГРУЗИТЬ" />
-            @*<button id="submit" type="submit" class="btn btn-default waves-effect waves-light">Загрузить</button>*@
-}
+                    @*<input id="submit" type="submit" class="btn btn-default waves-effect waves-light" value="Загрузить" />*@
+                    <button id="submit" type="submit" class="btn btn-default waves-effect waves-light">Загрузить</button>
+                }
             </section>
         </div>
     </div>

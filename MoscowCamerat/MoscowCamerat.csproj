@@ -262,6 +262,8 @@
     <Content Include="img\Main.jpg" />
     <Content Include="img\Orchestra\1-e\AnnaGubert.jpg" />
     <Content Include="img\Orchestra\1-e\AnnaGubert_m.jpg" />
+    <Content Include="img\Orchestra\2-e\GeorgiNikolski.jpg" />
+    <Content Include="img\Orchestra\2-e\GeorgiNikolski_m.jpg" />
     <Content Include="img\Orchestra\2-e\SabanovaAvatar.jpg" />
     <Content Include="img\Orchestra\2-e\SabanovaAvatar_m.jpg" />
     <Content Include="img\Orchestra\Cello\ErmakovAleksandr.jpg" />

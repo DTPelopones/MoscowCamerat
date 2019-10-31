@@ -74,13 +74,22 @@
     </div>
 </div>
 
-    <footer id="events" class="page-footer center-on-small-only">
+<footer id="events" class="page-footer center-on-small-only">
 
     <div class="container text-xs-center">
 
         <section class="section">
             <h1 class="section-heading title">События</h1>
             <div class="row text-xs-center flex-center">
+
+
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card card-cascade wider">
+                        <iframe width="100%" src="https://www.youtube.com/embed/P0exVrXl-Gw" frameborder="0" allowfullscreen></iframe>
+                    </div>
+
+                </div>
 
                 <div class="col-lg-3 col-md-6">
                     <div class="card card-cascade wider">
@@ -117,7 +126,7 @@
 
             </div>
 
-</section>
+        </section>
 
     </div>
     <br />
@@ -125,10 +134,11 @@
     <div class="social-section">
         <ul class="ulSocial">
             <li><a class="btn-floating btn-small btn-fb waves-effect waves-light" href="https://www.facebook.com/moskamerata"><i class="fa fa-facebook"> </i></a></li>
+            <li><button id="buytickets" class="btn btn-primary" onClick="window.open('https://ponominalu.ru/event/moskovskaya-kamerata?utm_source=kamerata&utm_medium=outreach&utm_campaign=offsite');">Билеты<p style="font-size: 7px">промокод: CAMERATA</p></button></li>
         </ul>
     </div>
 
-    @Html.Partial("~/Views/Shared/FooterInfo.cshtml") 
+    @Html.Partial("~/Views/Shared/FooterInfo.cshtml")
 
 </footer>
 
