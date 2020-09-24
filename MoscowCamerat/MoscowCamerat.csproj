@@ -270,6 +270,8 @@
     <Content Include="img\Orchestra\Cello\ErmakovAleksandr_m.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov.jpg" />
     <Content Include="img\Orchestra\Cello\NikolayPavlinov_m.jpg" />
+    <Content Include="img\Orchestra\Cello\PitirimovaAlla.jpg" />
+    <Content Include="img\Orchestra\Cello\PitirimovaAlla_m.jpg" />
     <Content Include="img\Soloists_1.jpg" />
     <Content Include="img\Soloists_2.jpg" />
     <Content Include="js\bootstrap-datetimepicker.min.js" />
