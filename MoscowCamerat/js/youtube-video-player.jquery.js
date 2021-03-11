@@ -1793,7 +1793,7 @@
         channel: false,
         user: false,
         videos: false,
-        api_key: 'AIzaSyCHYP827NJedIH3cvreUZ7gZYqN3GCrNok', 
+        api_key: 'AIzaSyDI3-cjr6-FSaBWvoF-Nu8Q4umYKRX27rA', 
         max_results: 50,
         pagination: true, 				// NEW IN 1.1
         continuous: true,
